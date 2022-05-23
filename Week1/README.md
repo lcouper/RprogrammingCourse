@@ -1,6 +1,6 @@
 # R Workshop 1 : Introduction to R #
 
-Welcome to R! You are now joining the ~1-2 million users worldwide enjoying the wonders of R. 
+Welcome to R! You are now joining >2 million users worldwide enjoying the wonders of R. 
 
 Today's learning objectives are to:
 - understand the benefits of learning R and its application to research
