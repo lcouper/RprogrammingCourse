@@ -1,4 +1,4 @@
-# Practice Exercises for Workshop 1 #
+# Week 1 Practice Exercises #
 
 Important notes before starting: 
 - Feel free to write out the code/answers for the questions below if that's helpful to you, or feel free to just use these exercises to guide your exploration (no one is grading you!)
