@@ -66,9 +66,11 @@ Ex:
 ```
 leafsize = c(4.3,6.8,7.0, 11.9, 3.1, 20.0)
 ```
+
 The above was an example of numerical data but you can also create categorial or character data. 
 This requires putting quotation marks around the data points so R doesn't think it's just another variable
-Ex: ```
+Ex: 
+```
 names = c("A", "A", "B", "B", "C", "C")
 ```
         
@@ -77,27 +79,29 @@ names = c("A", "A", "B", "B", "C", "C")
 This is the recommended method for any dataset larger than a couple rows/columns. 
 There are a few different ways to import data:
         
-Manual (command-line) import
-        Uses the "read" functions in R. including "read.csv", and "read.table" (Which one you use depends on the format   your data is in)
-        In this command you should specificy if the data you're importing has column names or not using the 'header' argument
-            You can also tell R if there are row names using the row.names argument (default is FALSE)
-            You should also assign the data to a new variable name. 
-              Do this by making up a name (should be something informative) and using either "=" or "<-" to assign data to that newly created variable
+1. Manually import data using the "read" functions: 
+These include "read.csv", and "read.table" (which one you use depends on the format of your data file). Using this command, you can specify whether the data you're importing has column names using the 'header' argument. You can also tell R if there are row names using the row.names argument (default is FALSE). Again you'll want to assign the data to a new variable name and use either "=" or "<-" to assign data to that newly created variable
             
-  Ex: Animals = read.csv("~/Downloads/CA_Animals.csv", header = TRUE, row.names = 1)
-  Ex: Eagles = read.table("~/Downloads/EagleForagingEcology.txt", header = TRUE)
+Examples: 
+ ```
+Animals = read.csv("~/Downloads/CA_Animals.csv", header = TRUE, row.names = 1)
+Eagles = read.table("~/Downloads/EagleForagingEcology.txt", header = TRUE)
+```
               
-Using R-studio tools
-       Go to File --> import dataset --> From text (base) -->
-       in the next screen, search for the file you want to upload -->
-       in the final screen, confirm that R is planning to upload your data the way you want it
+2. Using R-studio tools
+- Go to File --> import dataset --> From text (base) -->
+- In the next screen, search for the file you want to upload -->
+- In the final screen, confirm that R is planning to upload your data the way you want it
               
 Once you've imported your data, there are some nice, quick functions for checking that it looks ok:
+Examples: 
+```
           head(data)  # Shows the first 6 rows (and all the columns) of your data
           View(data)  # Pulls up the whole dataset in the script window 
           dim(data)   # Provides the dimensions of your data
           str(data)   # Provides info about the class of your dataset (more on that later), the dimensions, and each of the columns
-              
+          ```
+             
 ## Section 5:  How to access your data ##
 
 You've now imported data and you want to start using functions/performing calculations on it. There are tons of functions for subsetting/ manipulating data in R (which we'll cover more next week). Today we will mainly be using the square brackets to access data
