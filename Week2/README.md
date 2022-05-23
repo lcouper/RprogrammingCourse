@@ -123,5 +123,28 @@ Data = as.logical(Data) #note this converts 'Data' into a list of True / False s
 ```
 
 
+## Section 5: Data reshaping ##
 
+Getting your data into the format you need analysis (aka data reshaping) is very important! (and time-consuming and hard)
+  
+Here are some basic ways you can reshape your data in R:
+  
+- Transpose your data (i.e. flip the rows and columns) using the 't' function
+  Example
+  ```
+  iris2 = t(iris)
+  ```
+
+- Convert between wide and long form
+  Example:
+  ``` 
+  View(mtcars) # mtcars is a dataset included in R (but if it doesn't open for you, trying first running 'library(datasets)'
+  library(reshape2) # load the reshape2 package, needed to use the melt function below
+  CarsMelt = melt(mtcars) # 'melt' the mtcars dataset 
+  
+  
+  CarMelt2 = melt(mtcars, id.vars = c("gear", "cyl") # melt the dataset, but this time, preserve the gears and cylinder columns (basically you're telling R to classify your data based on the number of gears and cyls)
+  ```
+  
+  
 
