@@ -100,31 +100,40 @@ Examples:
           View(data)  # Pulls up the whole dataset in the script window 
           dim(data)   # Provides the dimensions of your data
           str(data)   # Provides info about the class of your dataset (more on that later), the dimensions, and each of the columns
-          ```
+```
              
 ## Section 5:  How to access your data ##
 
-You've now imported data and you want to start using functions/performing calculations on it. There are tons of functions for subsetting/ manipulating data in R (which we'll cover more next week). Today we will mainly be using the square brackets to access data
-     
+You've now imported data and you want to start using functions/performing calculations on it. There are tons of functions for manipulating data in R (We'll cover these more next week). Today we will mainly be using the square brackets to access data:
+  
+Examples: 
+```
          Eagles[4,2]    # Tells R to look in the "Eagles" dataframe and pull out the 4th row and 2nd column  
          Eagles[4,]     # Tells R to look in the Eagles dataframe and pull out the ENTIRE 4th row
          Eagles[,2]     # Tells R to pull out entire 2nd column
          Eagles[5, 2:4] # Pull out the 5th row, but just columns 2-4
-         
+```        
+    
   You can assign these data subsets to new variables or perform calculations directly on these subsets.
-     
-   Ex: SiteC = Animals[3,]
+    
+Examples:
+```
+SiteC = Animals[3,]
          sum(SiteC)
          
-   Ex: Lizards = Animals[,4]
+Lizards = Animals[,4]
          mean(Lizards)
-         
-   If you're working with your dataset as a data frame (more on this in the next workshop), you can also the '$' to access columns
+```
+
+If you're working with your dataset as a data frame (more on this in the next workshop), you can also the '$' to access columns
+Examples: 
+```
     Ex: Animals$Squirrels   # Pulls out the squirrels column
     Ex: range(Aniamsl$Woodrat) # Outputs the min and max number of woodrats at all the sites
+```
  
  
- ## Random other important notes when beginning R ##
+ ## Other useful notes when beginning R ##
  
  * R is case-sensitive! If you define a variable as "g", calling "G" will not work
  * If you're at the console, you can use the up and down arrow keys to see previously entered code (shouldn't really matter because you've been working in the script window!)
