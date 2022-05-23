@@ -93,15 +93,15 @@ R recognizes different data 'types' data 'structures'.
 Here is quick overview:
   
 Data types:
-  character = for text data
-  numeric = for real numbers
-  integer = for integers
-  logical = for True/False statements
-  factor = for integers/text with some sort of hierarchy
+- character = for text data
+- numeric = for real numbers
+- integer = for integers
+- logical = for True/False statements
+- factor = for integers/text with some sort of hierarchy
   
 Data structures:
-  data frames = can store different types of data classes
-  matrices = can only hold one type of data class
+- data frames = can store different types of data classes
+- matrices = can only hold one type of data class
   
 Converting between different classes may be important, as R can sometimes mistake your intention for the data and there are some functions that require data of a certain class
 
