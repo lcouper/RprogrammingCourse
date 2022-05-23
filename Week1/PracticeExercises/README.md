@@ -183,7 +183,7 @@ Use the following code to create a new variable "mouse" which contains the sum o
 Mouse = NoFire$DeerMouse + NoFire$CaliforniaMouse
 ```
 
-4.16) Is there anothe way that you could have done this?
+4.16) What is another way that you could have done this?
 
 4.17) Remove the DeerMouse and CaliforniaMouse columns. Add in the "Mouse" variable as a column to a new data frame called "SmallMammals2"
 
