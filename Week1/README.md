@@ -1,23 +1,23 @@
-# R Workshop 1 Notes/Overview 
+# R Workshop 1 : Introduction to R #
 
-Welcome to R! 
+Welcome to R! You are now joining the ~1-2 million users worldwide enjoying the wonders of R. 
 
-You are now joining the ~1-2 million users worldwide enjoying the wonders of R. 
-
-In today's workshop, we will cover:
-
-1) The layout/functionality of R Studio
-2) How to use R functions
-3) How to install packages
-4) How to import data
-5) How to access subsets of data
+Today's learning objectives are to:
+- understand the benefits of learning R and its application to research
+- succesfully download R and R studio
+- become familiar with:
+  - the layout/functionality of R Studio
+  -  How to use R functions
+  -  How to install packages
+  -  How to import data
+  -  How to access subsets of data
 
 
 ## Section 1: R Studio Layout ##
 
 ![R studio layout](./Rstudio_Layout.jpg)
 
-  
+
   
 ## Section 2: Functions in R ##
 
