@@ -41,8 +41,9 @@ Ricks = arrange(mdt, Rickettsia)
 1.11) Now convert this mdt2 dataset from wide format to long format using the "melt" function. Save the output in a new data frame called "Melted"
 
 1.12) We haven't gotten to plotting yet, but lets create a histogram of this dataset to see the distribution of the "values" using the following code:
-
+```
 hist(Melted$value)
+```
 
 1.13) What is this plot showing you? 
 1.14) How did "melting" the data frame enable us to create this plot?
