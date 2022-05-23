@@ -41,8 +41,9 @@ Empty = matrix(0, nrow = 3, ncol = 5)
 Store this data in a new variable called "Simulated" and replace row 1 of the "Empty" dataset with "Simulated"
 
 
-## 2. Importing and exploring data ##
-### Useful functions: read.csv(), mean(), max(), which(), unique() ###
+## 2. Importing data and exploring data: Mosquito Data example ##
+
+### Useful functions: read.csv(), mean(), max(), which() ###
 
 2.1 Download and import the "Anopheles_Data.csv" data set. Save it as a variable in R called "Anopheles"
 Note: There are column names in this dataset (so set header = TRUE)
@@ -74,7 +75,7 @@ For example, you could calculate the mean mosquito abundance based on the sample
 ```
 aggregate(Anopheles$value ~ Anopheles$sample_location_info, FUN = mean)
 ```
-The first argument indicates that we want the "value" column of the Anopheles data frame to be broken up based on the "sample_location_info" column
+The first argument indicates that we want the "value" column of the *Anopheles* data frame to be broken up based on the "sample_location_info" column
 The second argument indicates that we want the mean calculated for each of the subsets
 
 2.10) Adapt the above code to calculate the average mosquito abundance by sample month.
@@ -85,92 +86,104 @@ Store this information in a new variable "MonthlyMos"
 Hint: How many data points were taken in January and February?
 
 
+## 3. Importing data and exploring data: Disease example ##
+### Useful functions: summmary(), unique() ###
 
-4) Download and import the "bacteria_data.txt" file in R using the read.table command or the import dataset tool
-The dataset contains info about the presence of the bacteria H. influenzae in children with otitis media in Australia
+3.1) Download and import the "bacteria_data.txt" file in R using the read.table command or the import dataset tool
+The dataset contains info about the presence of the bacteria *H. influenzae* in children with otitis media in Australia
 
 The dataset contains 220 rows and the following columns:
-y: presence or absence: a factor with levels n and y.
-ap: active/placebo: a factor with levels a and p.
-hilo: hi/low compliance: a factor with levels hi amd lo.
-week: week of test.
-ID: subject ID: a factor.
-trt: a factor with levels placebo, drug and drug+, a re-coding of ap and hilo.
+- y: presence or absence: a factor with levels n and y.
+- ap: active/placebo: a factor with levels a and p.
+- hilo: hi/low compliance: a factor with levels hi amd lo.
+- week: week of test.
+- ID: subject ID: a factor.
+- trt: a factor with levels placebo, drug and drug+, a re-coding of ap and hilo.
 
-Use the 'summary' function on this dataset to get some quick summary stats.
+3.2) Use the 'summary' function on this dataset to get some quick summary stats.
 
-4.1) How many patients were in the placego group? How many in the active group?
+3.3) How many patients were in the placego group? How many in the active group?
 
-4.2) How many unique participants are included in this data set?
+3.4) How many unique participants are included in this data set?
 
-4.3) Separate the patients in the active vs placebo group and assign these to new variables using the following command 
-(or don't look below and see if you can adapt the code from 3.3 to do this on your own!)
-
+3.5) Separate the patients in the active vs placebo group and assign these to new variables using the following command 
+```
 placebo = Bacteria[Bacteria$ap == "p",]
 active = Bacteria[Bacteria$ap == "a",]
+```
 
-4.4) Now use the summary function on these two variables, placebo and active,
-to see how the presence of bacteria (in the "y" column) differed between these two groups.
+3.6) Now use the summary function on these two variables, placebo and active, to see how the presence of bacteria (in the "y" column) differed between these two groups.
 
-4.4.1) What percentage of the actively treated patients had bacteria present?
+3.7) What percentage of the actively treated patients had bacteria present?
 
-4.4.2) What percentage of the patients in the placebo group had bacteria present?
+3.8) What percentage of the patients in the placebo group had bacteria present?
 
 
-5) Download, import and view the Animals dataset (CA_Animals.csv)
+## 4. Importing data and exploring data: CA Animals example ##
+### Useful functions: colSums(), rbind(), cbind(), rownames(), dim(), head(), var(), sqrt() ###
 
-5.1) Use the "colSums" function to figure out which animal is most abundant across all the sites
+4.1) Download, import and view the Animals dataset (CA_Animals.csv)
 
-5.2) How many total animals are at Site E? 
-You can do this first by making the 5th row of the dataset its own variable and calling the sum function on that variable
-Or doing it all in one line (i.e using the sum function on the 5th row without assigning it as a new variable)
+4.2) Use the "colSums" function to figure out which animal is most abundant across all the sites
 
-5.3) Create a new vector of data called "Chipmunks" that has the values: 2, 4, 2, 0, 5, 1
+4.3) How many total animals are at Site E? You can do this first by making the 5th row of the dataset its own variable and calling the sum function on that variable, or doing it all in one line (i.e, using the sum function on the 5th row without assigning it as a new variable)
 
-5.4) Add 'Chipmunks' to the Animals data frame using the following code:
+4.4) Create a new vector of data called "Chipmunks" that has the values: 2, 4, 2, 0, 5, 1
+
+4.5) Add 'Chipmunks' to the Animals data frame using the following code:
+```
 Animals = cbind(Animals, Chipmunks) 
+```
 
-5.4.1) What would have happened if we had instead wrote: Animals = cbind(Chipmunks, Animals)
+4.6) What would have happened if we had instead wrote: Animals = cbind(Chipmunks, Animals) ? 
 
-5.5) Adapt the method above to add a new site to the Animals data frame.
-First create a variable "SiteG" and assign it the values 3,5,4,8,0,1,2,1.
+4.7) Adapt the method above to add a new site to the Animals data frame.
+First create a variable called "SiteG" and assign to it the values: 3,5,4,8,0,1,2,1.
 Note you will need to use the rbind function this time instead of cbind
 
-5.5.1) View the animals dataset. What looks different about this row from the rows before it?
+4.8) View the animals dataset. What looks different about this row from the rows before it?
 
-5.5.2) Examine the names of the rows for the dataset using the following code:
+4.9) Examine the names of the rows for the dataset using the following code:
+```
 rownames(Animals) 
+```
 
-5.5.3) Change the 7th entry in the rownames of Animals to be "SiteG" using the following code:
+4.10) Change the 7th entry in the rownames of Animals to be "SiteG" using the following code:
+```
 rownames(Animals)[7] = "SiteG"
+```
 
-5.4) We later realized the "Pinyon Mouse" was mis-identified and is actually the California mouse.
+4.11) We later realized the "Pinyon Mouse" was mis-identified and is actually the California mouse.
 Change the column name for column 3 to the correct species.
 
-5.5) For an upcoming analysis, we only want to look at the data for small mammals, so we need to remove the lizard data.
+4.12) For an upcoming analysis, we only want to look at the data for small mammals, so we need to remove the lizard data.
 Remove this column and assign the subsetted data to a new variable:
 
+```
 SmallMammals = Animals[,-4]
+```
 
-5.6) It turns out that sites B & C were affeced by a wildfire and we want to remove these site from our analysis.
+4.13) It turns out that sites B & C were affeced by a wildfire and we want to remove these site from our analysis.
 Remove these rows and save the subsetted data into a new data frame called "NoFire"
 
-5.7) Check that you properly removed these rows by examining the dimensions of NoFire using the 'dim' function
+4.14) Check that you properly removed these rows by examining the dimensions of NoFire using the 'dim' function
 
-5.8) We now want to combine the two mouse species columns for futher analysis. 
+4.15) We now want to combine the two mouse species columns for futher analysis. 
 Use the following code to create a new variable "mouse" which contains the sum of the Pinyon mouse & California mouse observations
 
+```
 Mouse = NoFire$DeerMouse + NoFire$CaliforniaMouse
+```
 
-5.8.1) Is there anothe way that you could have done this?
+4.16) Is there anothe way that you could have done this?
 
-5.9) Remove the DeerMouse and CaliforniaMouse columns. Add in the "Mouse" variable as a column to a new data frame called "SmallMammals2"
+4.17) Remove the DeerMouse and CaliforniaMouse columns. Add in the "Mouse" variable as a column to a new data frame called "SmallMammals2"
 
-5.9.1) Use the 'head' function on SmallMammals2 to make sure you created the new data frame correctly
+4.18) Use the 'head' function on SmallMammals2 to make sure you created the new data frame correctly
 
-5.10) How does the variance of mice found at sites compare to the variance of voles?
+4.19) How does the variance of mice found at sites compare to the variance of voles?
 
-5.11) Before modeling the Small Mammal data, we want to square root transform all abundance values.
+4.20) Before modeling the Small Mammal data, we want to square root transform all abundance values.
 Create a new variable called "SqSm" that contains the square-root of the values from the SmallMammals2 data frame
 
 
