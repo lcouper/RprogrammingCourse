@@ -15,7 +15,7 @@ In today's workshop, we will cover:
 
 ## Section 1: R Studio Layout ##
 
-![R studio layout](./RstudioLayout.jpg)
+![R studio layout](./RStudioLayout.jpg)
 
   
   
