@@ -1,4 +1,4 @@
-### R Workshop 1: Answers to Practice Exercises ###
+### Answers to Week 1 Practice Exercises ###
 
 #### 1. Simulating data ####
 
