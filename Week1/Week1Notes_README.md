@@ -65,7 +65,8 @@ Now you want to use all the snazzy new functions you have available to you on so
 
 Create a new variable and set your data equal to this variable.
 Use the "c()" function to tell R you are passing it a list of data points rather than a single data point
-Ex: ```
+Ex: 
+```
 leafsize = c(4.3,6.8,7.0, 11.9, 3.1, 20.0)
 ```
 You can also create categorial or character data. 
