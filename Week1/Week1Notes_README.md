@@ -15,7 +15,9 @@ In today's workshop, we will cover:
 
 ## Section 1: R Studio Layout ##
 
-![Alt text](https://github.com/lcouper/RprogrammingCourse/Graphics/Rstudiolayout.jpg)
+![Alt text](https://github.com/lcouper/RprogrammingCourse/Graphics/RstudioLayout.jpg)
+
+
   
   
 ## Section 2: Functions in R ##
