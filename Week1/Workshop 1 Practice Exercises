@@ -3,31 +3,41 @@
 Feel free to write out the code/answers for the questions below if that's helpful to you
 Or feel free to just use these exercises to guide your exploration (no one is grading you!)
 
-1) You want to simulate the outcome of 50 random coin tosses. How could you do this in R?
+## 1. Simulating data ##
+### Useful functions: sample(), rnorm() 
 
-1.1) You want to simulate the lengths (in centimeters) of arabidopsis stems. 
+1.1) You want to simulate the outcome of 50 random coin tosses. How could you do this in R?
+
+
+1.2) You want to simulate the lengths (in centimeters) of Arabidopsis stems. 
 You want 20 values ranging from 3.4 to 11.6 (i.e. non-integer values must be possible). 
 How could you do this?
 Hint: The "sample" function only works for integers so you will need to find a different function.
 
-2.1) You have a dataset that you want to compare to normally distirbtued data with mean = 0 and sd = 1. 
+
+1.3) You have a dataset that you want to compare to normally distributed data with mean = 0 and sd = 1. 
 How would you sample 100 values from a normal distribution of mean 0 and sd 1?
 Hint: Use the rnorm function. Use ?rnorm for help on how to use it!
 
-2.2) You have a dataset containing 6 treatment groups and participants 1-10 in each group. 
+
+1.4) You have a dataset containing 6 treatment groups and participants 1-10 in each group. 
 Create a vector called "Indices" that contains the values 1:10 repeated 6 times. Hint: use the 'rep' function
 
-2.2.1) If instead of having the values be collated (1,2,3... 1,2,3.... 1,2,3...), 
+
+1.5) If instead of having the values be collated (1,2,3... 1,2,3.... 1,2,3...), 
 you want the values uncollated (1,1,1,1....2,2,2,2....3,3,3,3), how would you do this?
 Hint: Google the "rep" function and explore the possible arguments to pass to it
 
-2.3) You want to create an empty matrix to later add simulated values to.
+1.6) You want to create an empty matrix to later add simulated values to.
 Create a matrix called "Empty" that contains 3 rows and 5 columns using the following code:
+```
 Empty = matrix(0, nrow = 3, ncol = 5)
+```
 
-2.4) 
-Challenge: Let's say you obtained the following data from a simulation:
+1.7) Let's say you obtained the following data from a simulation:
+```
 35,8,1,9,12
+```
 Store this data in a new variable called "Simulated" and replace row 1 of the "Empty" dataset with "Simulated"
 
 
