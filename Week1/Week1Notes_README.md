@@ -31,25 +31,25 @@ In today's workshop, we will cover:
    
  
 ## Section 3: Installing packages ##
-    If you want to do calculations/analysis not available through the functions in base R 
-    Can be done 1 of 2 ways:
-    
-   First way: manual (command-line) install.
+
+If you want to do calculations/analysis not available through the functions in base R, this can be done 1 of 2 ways:
+
+1) Manual (command-line) install.
       Uses the "install.packages" function
         Ex: install.packages("vegan")
     
-   Second way: using R-studio tools. 
+2) Using R-studio tools. 
       Go to 'packages' tab --> install
       
-   Both methods require that you "load" the package after installing it and before actually using it.
-    Again you can do this 1 of 2 ways:
+Both methods require that you "load" the package after installing it and before actually using it.
+Again you can do this 1 of 2 ways:
     
-   First way: manual (command-line) load.
-      Uses the "library" function
+1) First way: manual (command-line) load. 
+        Uses the "library" function
         Ex: library(vegan) 
         
-   Second way: Using R-studio tools.
-      In packages tab, make sure the checkbox is clicked beside the package you want to use
+2) Using R-studio tools.
+  In packages tab, make sure the checkbox is clicked beside the package you want to use
       
   
 ## Section 4:  Importing data ##
