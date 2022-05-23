@@ -53,22 +53,23 @@ Again you can do this 1 of 2 ways:
       
   
 ## Section 4:  Importing data ##
-    Now you want to use all the snazzy new functions you have available to you on some actual data. 
-    You can get your data into R either by manually entering it (only do those for very small datasets) or importing the data files
+
+Now you want to use all the snazzy new functions you have available to you on some actual data. You can get your data into R either by manually entering it (only do those for very small datasets) or importing the data files
     
-   Manually entering data
-       Create a new variable and set your data equal to this variable.
-       Use the "c()" function to tell R you are passing it a list of data points rather than a single data point
-        Ex: leafsize = c(4.3,6.8,7.0, 11.9, 3.1, 20.0)
-       You can also create categorial or character data. 
-       This requires putting quotation marks around the data points so R doesn't think it's just another variable
-        Ex: names = c("A", "A", "B", "B", "C", "C")
+### Manually entering data ###
+
+Create a new variable and set your data equal to this variable.
+Use the "c()" function to tell R you are passing it a list of data points rather than a single data point
+Ex: leafsize = c(4.3,6.8,7.0, 11.9, 3.1, 20.0)
+You can also create categorial or character data. 
+This requires putting quotation marks around the data points so R doesn't think it's just another variable
+Ex: names = c("A", "A", "B", "B", "C", "C")
         
-   Importing data
+Importing data
         Recommended method for any dataset larger than a couple rows/columns
         There are a few different ways to import data:
         
-   Manual (command-line) import
+Manual (command-line) import
         Uses the "read" functions in R. including "read.csv", and "read.table" (Which one you use depends on the format   your data is in)
         In this command you should specificy if the data you're importing has column names or not using the 'header' argument
             You can also tell R if there are row names using the row.names argument (default is FALSE)
@@ -78,23 +79,22 @@ Again you can do this 1 of 2 ways:
   Ex: Animals = read.csv("~/Downloads/CA_Animals.csv", header = TRUE, row.names = 1)
   Ex: Eagles = read.table("~/Downloads/EagleForagingEcology.txt", header = TRUE)
               
-   Using R-studio tools
-              Go to File --> import dataset --> From text (base) -->
-              in the next screen, search for the file you want to upload -->
-              in the final screen, confirm that R is planning to upload your data the way you want it
+Using R-studio tools
+       Go to File --> import dataset --> From text (base) -->
+       in the next screen, search for the file you want to upload -->
+       in the final screen, confirm that R is planning to upload your data the way you want it
               
-  Once you've imported your data, there are some nice, quick functions for checking that it looks ok:
+Once you've imported your data, there are some nice, quick functions for checking that it looks ok:
           head(data)  # Shows the first 6 rows (and all the columns) of your data
           View(data)  # Pulls up the whole dataset in the script window 
           dim(data)   # Provides the dimensions of your data
           str(data)   # Provides info about the class of your dataset (more on that later), the dimensions, and each of the columns
               
 ## Section 5:  How to access your data ##
-     You've now imported data and you want to start using functions/performing calculations on it
-     There are tons of functions for subsetting/ manipulating data in R (which we'll cover more next week)
-     Today we will mainly be using the square brackets to access data
+
+You've now imported data and you want to start using functions/performing calculations on it. There are tons of functions for subsetting/ manipulating data in R (which we'll cover more next week). Today we will mainly be using the square brackets to access data
      
-   Eagles[4,2]    # Tells R to look in the "Eagles" dataframe and pull out the 4th row and 2nd column  
+         Eagles[4,2]    # Tells R to look in the "Eagles" dataframe and pull out the 4th row and 2nd column  
          Eagles[4,]     # Tells R to look in the Eagles dataframe and pull out the ENTIRE 4th row
          Eagles[,2]     # Tells R to pull out entire 2nd column
          Eagles[5, 2:4] # Pull out the 5th row, but just columns 2-4
