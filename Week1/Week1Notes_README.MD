@@ -15,7 +15,7 @@ In today's workshop, we will cover:
 
 ## Section 1: R Studio Layout ##
 
-![R studio layout](https://github.com/lcouper/RprogrammingCourse/Graphics/RstudioLayout.jpg?raw=true)
+![R studio layout](./RstudioLayout.jpg)
 
   
   
