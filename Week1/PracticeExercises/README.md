@@ -41,7 +41,7 @@ Empty = matrix(0, nrow = 3, ncol = 5)
 Store this data in a new variable called "Simulated" and replace row 1 of the "Empty" dataset with "Simulated"
 
 
-## 2. Importing data and exploring data: Mosquito Data example ##
+## 2. Importing and exploring data: Mosquito Data example ##
 
 ### Useful functions: read.csv(), mean(), max(), which() ###
 
@@ -86,7 +86,7 @@ Store this information in a new variable "MonthlyMos"
 Hint: How many data points were taken in January and February?
 
 
-## 3. Importing data and exploring data: Disease example ##
+## 3. Importing and exploring data: Disease example ##
 ### Useful functions: summmary(), unique() ###
 
 3.1) Download and import the "bacteria_data.txt" file in R using the read.table command or the import dataset tool
@@ -119,7 +119,7 @@ active = Bacteria[Bacteria$ap == "a",]
 3.8) What percentage of the patients in the placebo group had bacteria present?
 
 
-## 4. Importing data and exploring data: CA Animals example ##
+## 4. Importing and exploring data: CA Animals example ##
 ### Useful functions: colSums(), rbind(), cbind(), rownames(), dim(), head(), var(), sqrt() ###
 
 4.1) Download, import and view the Animals dataset (CA_Animals.csv)
