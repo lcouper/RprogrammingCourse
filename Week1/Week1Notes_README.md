@@ -1,4 +1,4 @@
-# R Workshop 1 Notes/Overview
+# R Workshop 1 Notes/Overview 
 
 Welcome to R! 
 
@@ -13,14 +13,14 @@ In today's workshop, we will cover:
 5) How to access subsets of data
 
 
-Section 1: R Studio Layout: 
+## Section 1: R Studio Layout ##
   Console: everything you type here gets executed (or run) 
   Script window: VERY IMPORTANT. USE THIS AND THIS ONLY THIS TO BUILD CODE
   Environment & history: Where you can see the variables you've created and past code you've run
   Plot/Packages/Files tab: Where you can see help info, install packages, and view plots
   
   
-Section 2: Functions in R 
+## Section 2: Functions in R ##
    How you communicate to R what you are trying to make it do
    Base R has many many functions already! Examples: mean, subset, plot
    Use functions by typing the name of the function and adding arguments within the parantheses
@@ -30,7 +30,7 @@ Section 2: Functions in R
    sample(1:10, 3)
    
  
-Section 3: Installing packages
+## Section 3: Installing packages ##
     If you want to do calculations/analysis not available through the functions in base R 
     Can be done 1 of 2 ways:
     
@@ -52,7 +52,7 @@ Section 3: Installing packages
       In packages tab, make sure the checkbox is clicked beside the package you want to use
       
   
-Section 4:  Importing data
+## Section 4:  Importing data ##
     Now you want to use all the snazzy new functions you have available to you on some actual data. 
     You can get your data into R either by manually entering it (only do those for very small datasets) or importing the data files
     
@@ -89,7 +89,7 @@ Section 4:  Importing data
           dim(data)   # Provides the dimensions of your data
           str(data)   # Provides info about the class of your dataset (more on that later), the dimensions, and each of the columns
               
-Section 5:  How to access your data
+## Section 5:  How to access your data ##
      You've now imported data and you want to start using functions/performing calculations on it
      There are tons of functions for subsetting/ manipulating data in R (which we'll cover more next week)
      Today we will mainly be using the square brackets to access data
@@ -112,7 +112,7 @@ Section 5:  How to access your data
     Ex: range(Aniamsl$Woodrat) # Outputs the min and max number of woodrats at all the sites
  
  
- Random other important notes when beginning R:
+ ## Random other important notes when beginning R ##
  
  * R is case-sensitive! If you define a variable as "g", calling "G" will not work
  * If you're at the console, you can use the up and down arrow keys to see previously entered code (shouldn't really matter because you've been working in the script window!)
