@@ -25,10 +25,10 @@ In today's workshop, we will cover:
    Base R has many many functions already! Examples: mean, subset, plot
    Use functions by typing the name of the function and adding arguments within the parantheses
    
-   Exs: 
+   Ex:```
    sqrt(101)
    sample(1:10, 3)
-   
+   ```
  
 ## Section 3: Installing packages ##
 
@@ -36,7 +36,7 @@ If you want to do calculations/analysis not available through the functions in b
 
 1) Manual (command-line) install.
       Uses the "install.packages" function
-        Ex: install.packages("vegan")
+        Ex: ``` install.packages("vegan") ```
     
 2) Using R-studio tools. 
       Go to 'packages' tab --> install
@@ -46,7 +46,7 @@ Again you can do this 1 of 2 ways:
     
 1) First way: manual (command-line) load. 
         Uses the "library" function
-        Ex: library(vegan) 
+        Ex: ```library(vegan) ```
         
 2) Using R-studio tools.
   In packages tab, make sure the checkbox is clicked beside the package you want to use
@@ -60,10 +60,10 @@ Now you want to use all the snazzy new functions you have available to you on so
 
 Create a new variable and set your data equal to this variable.
 Use the "c()" function to tell R you are passing it a list of data points rather than a single data point
-Ex: leafsize = c(4.3,6.8,7.0, 11.9, 3.1, 20.0)
+Ex: ```leafsize = c(4.3,6.8,7.0, 11.9, 3.1, 20.0)```
 You can also create categorial or character data. 
 This requires putting quotation marks around the data points so R doesn't think it's just another variable
-Ex: names = c("A", "A", "B", "B", "C", "C")
+Ex: ```names = c("A", "A", "B", "B", "C", "C")```
         
 Importing data
         Recommended method for any dataset larger than a couple rows/columns
