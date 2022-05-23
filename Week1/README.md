@@ -1,4 +1,4 @@
-# R Workshop 1 : Introduction to R #
+# Week 1: Introduction to R #
 
 Welcome to R! You are now joining >2 million users worldwide enjoying the wonders of R. 
 
