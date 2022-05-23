@@ -77,7 +77,7 @@ To add rows and columns, we can use the rbind (row bind) and cbind (column bind)
  cbind(iris, randomID)
  ```
  
- ## Section 3: Changing row and column names
+ ## Section 3: Changing row and column names ##
 
 We can view and change the row and column names using: rownames(data), and colnames(data)
 
@@ -87,6 +87,37 @@ rownames(iris) # View the row names for the iris data set
 colnames(iris) = c("Sepal.Length", "Sepal.Width", "Petal.Width", "Petal.Length", "Species") # change the colnames of iris dataset (switch petal width/length)
 ```
  
+## Section 4: Data classes ##
+
+R recognizes different data 'types' data 'structures'. 
+Here is quick overview:
+  
+Data types:
+  character = for text data
+  numeric = for real numbers
+  integer = for integers
+  logical = for True/False statements
+  factor = for integers/text with some sort of hierarchy
+  
+Data structures:
+  data frames = can store different types of data classes
+  matrices = can only hold one type of data class
+  
+Converting between different classes may be important, as R can sometimes mistake your intention for the data and there are some functions that require data of a certain class
+
+Check data class by using "class" function:
+Example
+```
+class(mtcars$gear)
+```
+
+Convert between different classes using functions like: as.numeric(), as.character(), as.factor()
+
+Example
+```
+Grades = read.csv("~/Downloads/Grades.csv", header = TRUE)
+Grades$ReadingLevel = as.factor(Grades$ReadingLevel)
+```
 
 
 
