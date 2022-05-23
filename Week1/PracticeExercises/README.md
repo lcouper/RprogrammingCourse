@@ -126,7 +126,7 @@ active = Bacteria[Bacteria$ap == "a",]
 ## 4. Importing and exploring data: CA Animals example ##
 ### Useful functions: colSums(), rbind(), cbind(), rownames(), dim(), head(), var(), sqrt() ###
 
-4.1) Download, import and view the Animals dataset (CA_Animals.csv)
+4.1) Download, import and view the Animals dataset (CA_Animals.csv), designating the first column to be the "row names"
 
 4.2) Use the "colSums" function to figure out which animal is most abundant across all the sites
 
