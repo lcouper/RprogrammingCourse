@@ -1,7 +1,8 @@
 # Practice Exercises for Workshop 1 #
 
-Feel free to write out the code/answers for the questions below if that's helpful to you
-Or feel free to just use these exercises to guide your exploration (no one is grading you!)
+Feel free to write out the code/answers for the questions below if that's helpful to you, or feel free to just use these exercises to guide your exploration (no one is grading you!)
+
+For nearly all of these problems, there are many different ways you could solve them. In the answer key, I provide one (or sometimes two) potential ways, but these aren't necesssarily the only "right" answer
 
 ## 1. Simulating data ##
 ### Useful functions: sample(), rnorm() 
