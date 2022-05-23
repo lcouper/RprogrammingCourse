@@ -127,6 +127,10 @@ active = Bacteria[Bacteria$ap == "a",]
 ### Useful functions: colSums(), rbind(), cbind(), rownames(), dim(), head(), var(), sqrt() ###
 
 4.1) Download, import and view the Animals dataset (CA_Animals.csv), designating the first column to be the "row names"
+Example: 
+``` 
+Animals = read.csv("~/Downloads/CA_Animals.csv, header = TRUE, row.names = 1)
+```
 
 4.2) Use the "colSums" function to figure out which animal is most abundant across all the sites
 
