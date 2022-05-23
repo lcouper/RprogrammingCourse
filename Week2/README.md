@@ -40,7 +40,43 @@ Examples
   # Same idea, but done with the intermediate step of defining a variable 'PetalLength'
   PetalLength = iris[,3] 
   mean(PetalLength)
+```
 
+You can also subset your data *based on values in other columns*. 
+Similar to the above, you still tell R which data frame you're working in. 
+But then instead of passing rows/columns, you can pass a logic statement (using ==, >, <=, etc)
+  
+Examples:
+```
+iris[iris$Species == "virginica",] # Pull out all the "virginica" species
+
+iris[iris$Petal.Length >= 6.0,] # Pull out all species with petal.length greater than or equal to 6.0
+```
+
+## Section 2: Adding and removing rows and columns ###
+
+This can be important if you are adding more data to your dataset, or later identifying data points you need to remove, etc.
+
+To remove rows and columns, we can use a similar strategy as in subsetting, but make use of the '-' operator
+Examples
+```
+  iris[-10, ] # Removes the 10th row of the dataset
+ ```
+  iris[ , -c(1,2)] # Removes the first two columns:
+  
+To add rows and columns, we can use the rbind (row bind) and cbind (column bind) function 
+  
+ Examples
+ ```
+ # Add another observation, "Flower 151" to the iris dataset:
+ Flower151 = c(7.2, 3.0, 6.4, 2.5, "virginica")  
+ rbind(iris, Flower151) 
+ 
+ # Add a column with a randomly generated ID to the iris dataset:
+ randomID = sample(1:150, 150, replace = FALSE)
+ cbind(iris, randomID)
+ ```
+ 
 
 
 
