@@ -77,6 +77,16 @@ To add rows and columns, we can use the rbind (row bind) and cbind (column bind)
  cbind(iris, randomID)
  ```
  
+ ## Section 3: Changing row and column names
+
+We can view and change the row and column names using: rownames(data), and colnames(data)
+
+Example:
+```
+rownames(iris) # View the row names for the iris data set
+colnames(iris) = c("Sepal.Length", "Sepal.Width", "Petal.Width", "Petal.Length", "Species") # change the colnames of iris dataset (switch petal width/length)
+```
+ 
 
 
 
