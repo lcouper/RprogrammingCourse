@@ -115,8 +115,11 @@ Convert between different classes using functions like: as.numeric(), as.charact
 
 Example
 ```
-Grades = read.csv("~/Downloads/Grades.csv", header = TRUE)
-Grades$ReadingLevel = as.factor(Grades$ReadingLevel)
+Grades = c("A", "B", "A", "A", "C", "A", "B")
+Grades = as.factor(Grades)
+
+Data = c(0,1,1,1,0,1,0,0,0,1,0,1,1)
+Data = as.logical(Data) #note this converts 'Data' into a list of True / False statements
 ```
 
 
