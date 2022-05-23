@@ -2,7 +2,7 @@
 
 Welcome to R! You are now joining >2 million users worldwide enjoying the wonders of R. 
 
-Today's learning objectives are to:
+This week's **learning objectives** are to:
 - understand the benefits of learning R and its application to research
 - succesfully download R and R studio
 - become familiar with:
