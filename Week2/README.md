@@ -140,10 +140,13 @@ Here are some basic ways you can reshape your data in R:
   ``` 
   View(mtcars) # mtcars is a dataset included in R (but if it doesn't open for you, trying first running 'library(datasets)'
   library(reshape2) # load the reshape2 package, needed to use the melt function below
-  CarsMelt = melt(mtcars) # 'melt' the mtcars dataset 
+  CarsMelt = melt(mtcars) # 'melt' the mtcars dataset (i.e., convert it from a wide format to a long format)
   
   
-  CarMelt2 = melt(mtcars, id.vars = c("gear", "cyl") # melt the dataset, but this time, preserve the gears and cylinder columns (basically you're telling R to classify your data based on the number of gears and cyls)
+  CarMelt2 = melt(mtcars, id.vars = c("gear", "cyl")) # melt the dataset, but this time, preserve the gears and cylinder columns (basically you're telling R to classify your data based on the number of gears and cyls)
+  
+  chick_m <- melt(ChickWeight, id=2:4, na.rm=TRUE) # melt the chick weight dataset
+  dcast(chick_m, diet ~ variable, mean) # 'cast' the dataset back to a wide format to easily see the average effect of diet on chick weight
   ```
   
   
