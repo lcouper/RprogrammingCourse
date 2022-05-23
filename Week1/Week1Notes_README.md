@@ -15,7 +15,7 @@ In today's workshop, we will cover:
 
 ## Section 1: R Studio Layout ##
 
-![Alt text](/Graphics/Rstudiolayout.jpg)
+![Alt text](Graphics/Rstudiolayout.jpg)
   
   
 ## Section 2: Functions in R ##
