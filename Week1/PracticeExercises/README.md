@@ -41,47 +41,46 @@ Empty = matrix(0, nrow = 3, ncol = 5)
 Store this data in a new variable called "Simulated" and replace row 1 of the "Empty" dataset with "Simulated"
 
 
+## 2. Importing and exploring data ##
+### Useful functions: read.csv(), mean(), max(), which(), unique() ###
 
-3) Download and import the "Anopheles_Data.csv" data set. Save it as a variable in R called "Anopheles"
-There are column names in this dataset (so set header = TRUE)
-This dataset contains information about the number of Anopheles quadrimaculatus (the malaria vector in eastern US) at various sites in Florida
+2.1 Download and import the "Anopheles_Data.csv" data set. Save it as a variable in R called "Anopheles"
+Note: There are column names in this dataset (so set header = TRUE)
+This dataset contains information about the number of *Anopheles quadrimaculatus* (the malaria vector in eastern US) at various sites in Florida
 The "value" column indicates how many mosuqitoes were found in the trap at that day/location.
 
-3.1) What is the average number of mosquitoes found at all traps/locations?
+2.1) What is the average number of mosquitoes found at all traps/locations?
 
-3.2) What is the max number of mosquitoes found? 
+2.2) What is the maximum number of mosquitoes found? 
 
-CHALLENGE: At which location did this max value of mosquitoes occur?
-  Hint: look-up the 'which' function
+2.3) At which location did this max value of mosquitoes occur? (Hint look-up the 'which' function)
 
-3.2.1) Create a new variable called Locations and set it equal to the sample_location_info column
+2.4) Create a new variable called Locations and set it equal to the sample_location_info column
 
-3.2.2) How many unique locations were sampled?
+2.5) How many unique locations were sampled?
 
-3.3)
-Split up the dataset into sites sampled in Northern and Southern Florida using the following commands:
+2.6) Split up the dataset into sites sampled in Northern and Southern Florida using the following commands:
+```
 NorthF = Anopheles[Anopheles$sample_lat_DD >= 27.45672,]
 SouthF = Anopheles[Anopheles$sample_lat_DD < 27.45672,]
+```
 
-3.3.1) Are there more mosquitoes in the Northern or Southern sample sites?
+2.7) Are there more mosquitoes in the Northern or Southern sample sites?
 
-CHALLENGE: Is the difference in mosquitoes statistically significant?
-Hint: Use the t.test function ont NorthF$value and SouthF$value
+2.8) Is the difference in mosquitoes statistically significant? (Use the t.test function on the NorthF$value and SouthF$value)
 
-3.4) In addition to calculating summary statistics on the whole dataset or a pre-determined subset, 
-you can also calculate summary stats based on values in other columns. 
+2.9) In addition to calculating summary statistics on the whole dataset or a pre-determined subset, you can also calculate summary stats based on values in other columns. 
 For example, you could calculate the mean mosquito abundance based on the sample site with the following code:
-
+```
 aggregate(Anopheles$value ~ Anopheles$sample_location_info, FUN = mean)
-
+```
 The first argument indicates that we want the "value" column of the Anopheles data frame to be broken up based on the "sample_location_info" column
 The second argument indicates that we want the mean calculated for each of the subsets
 
-Adapt the above code to calculate the average mosquito abundance by sample month.
+2.10) Adapt the above code to calculate the average mosquito abundance by sample month.
 Store this information in a new variable "MonthlyMos"
 
-Which months had the highest mosquito abundance? 
-Does this seem consistent with what you know about mosquitoes?
+2.11) Which months had the highest mosquito abundance? Does this seem consistent with what you know about mosquitoes?
 (Something odd is going on with the dataset. Take a look at the values listed in the sample_month and see if you can figure out what it is.)
 Hint: How many data points were taken in January and February?
 
