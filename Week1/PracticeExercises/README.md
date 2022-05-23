@@ -81,9 +81,7 @@ The second argument indicates that we want the mean calculated for each of the s
 2.10) Adapt the above code to calculate the average mosquito abundance by sample month.
 Store this information in a new variable "MonthlyMos"
 
-2.11) Which months had the highest mosquito abundance? Does this seem consistent with what you know about mosquitoes?
-(Something odd is going on with the dataset. Take a look at the values listed in the sample_month and see if you can figure out what it is.)
-Hint: How many data points were taken in January and February?
+2.11) Which months had the highest mosquito abundance? Something odd is going on with the dataset. Take a look at the values listed in the sample_month and see if you can figure out what it is. Hint: How many data points were taken in January and February?
 
 
 ## 3. Importing and exploring data: Disease example ##
