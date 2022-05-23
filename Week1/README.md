@@ -20,11 +20,12 @@ In today's workshop, we will cover:
   
   
 ## Section 2: Functions in R ##
-   How you communicate to R what you are trying to make it do
-   Base R has many many functions already! Examples: mean, subset, plot
-   Use functions by typing the name of the function and adding arguments within the parantheses
+
+'Functions' are how you communicate to R what you are trying to make it do. R has many many built-in functions already! 
+Examples include: mean(), subset(), plot()
+You can use functions by typing the name of the function and adding arguments within the parantheses
    
-   Ex:
+   For example:
    ```
    sqrt(101)
    sample(1:10, 3)
@@ -32,51 +33,49 @@ In today's workshop, we will cover:
  
 ## Section 3: Installing packages ##
 
-If you want to do calculations/analysis not available through the functions in base R, this can be done 1 of 2 ways:
+There are also lots of additional functions not including in 'base' R, but that are part of packages made by other users. To access these, you need to first install the package. This can be done 1 of 2 ways:
 
-1) Manual (command-line) install.
-      Uses the "install.packages" function
+1) "Manually" installing the package at the command line using the "install.packages" function
         Ex: ``` 
         install.packages("vegan") ```
         
-    
 2) Using R-studio tools. 
       Go to 'packages' tab --> install
       
 Both methods require that you "load" the package after installing it and before actually using it.
 Again you can do this 1 of 2 ways:
     
-1) First way: manual (command-line) load. 
-        Uses the "library" function
+1) "Manually" load the library using the "library function" 
         Ex: ```
         library(vegan) 
         ```
         
 2) Using R-studio tools.
-  In packages tab, make sure the checkbox is clicked beside the package you want to use
+  In the packages tab, make sure the checkbox is clicked beside the package you want to use
       
   
 ## Section 4:  Importing data ##
 
-Now you want to use all the snazzy new functions you have available to you on some actual data. You can get your data into R either by manually entering it (only do those for very small datasets) or importing the data files
+Now you want to use all the snazzy new functions you have available to you on some actual data. You can get your data into R either by manually entering it (only do those for very small datasets) or by importing the data files
     
 ### Manually entering data ###
 
-Create a new variable and set your data equal to this variable.
+Create a new variable (a meaningful but short name that you make up) and set your data equal to this variable.
 Use the "c()" function to tell R you are passing it a list of data points rather than a single data point
 Ex: 
 ```
 leafsize = c(4.3,6.8,7.0, 11.9, 3.1, 20.0)
 ```
-You can also create categorial or character data. 
+The above was an example of numerical data but you can also create categorial or character data. 
 This requires putting quotation marks around the data points so R doesn't think it's just another variable
 Ex: ```
 names = c("A", "A", "B", "B", "C", "C")
 ```
         
-Importing data
-        Recommended method for any dataset larger than a couple rows/columns
-        There are a few different ways to import data:
+### Importing data ###
+
+This is the recommended method for any dataset larger than a couple rows/columns. 
+There are a few different ways to import data:
         
 Manual (command-line) import
         Uses the "read" functions in R. including "read.csv", and "read.table" (Which one you use depends on the format   your data is in)
