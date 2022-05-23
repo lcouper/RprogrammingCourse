@@ -98,6 +98,12 @@ The dataset contains 220 rows and the following columns:
 - ID: subject ID: a factor.
 - trt: a factor with levels placebo, drug and drug+, a re-coding of ap and hilo.
 
+We'll talk more about data classes next time, but for now, run the code below to make sure the y and ap columns are "factors"
+```
+Bacteria$y = as.factor(Bacteria$y)
+Bacteria$ap = as.factor(Bacteria$ap)
+```
+
 3.2) Use the 'head' function on this dataset to get a quick sense for what the dataset contains
 
 3.3) How many patients were in the placego group? How many in the active group?
