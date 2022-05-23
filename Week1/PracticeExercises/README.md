@@ -85,7 +85,7 @@ Store this information in a new variable "MonthlyMos"
 
 
 ## 3. Importing and exploring data: Disease example ##
-### Useful functions: summmary(), unique() ###
+### Useful functions: head(), summmary(), unique() ###
 
 3.1) Download and import the "bacteria_data.txt" file in R using the read.table command or the import dataset tool
 The dataset contains info about the presence of the bacteria *H. influenzae* in children with otitis media in Australia
@@ -98,7 +98,7 @@ The dataset contains 220 rows and the following columns:
 - ID: subject ID: a factor.
 - trt: a factor with levels placebo, drug and drug+, a re-coding of ap and hilo.
 
-3.2) Use the 'summary' function on this dataset to get some quick summary stats.
+3.2) Use the 'head' function on this dataset to get a quick sense for what the dataset contains
 
 3.3) How many patients were in the placego group? How many in the active group?
 
