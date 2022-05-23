@@ -14,10 +14,8 @@ In today's workshop, we will cover:
 
 
 ## Section 1: R Studio Layout ##
-  Console: everything you type here gets executed (or run) 
-  Script window: VERY IMPORTANT. USE THIS AND THIS ONLY THIS TO BUILD CODE
-  Environment & history: Where you can see the variables you've created and past code you've run
-  Plot/Packages/Files tab: Where you can see help info, install packages, and view plots
+
+![Alt text](/Graphics/Rstudiolayout.jpg)
   
   
 ## Section 2: Functions in R ##
