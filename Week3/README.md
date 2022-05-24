@@ -113,3 +113,5 @@ Here, the predict.lm function uses the relationship between horsepower, weight, 
 From the model output we see that the Honda Roaster and VolvoP1900 are predicted to get 22.15 and 16.17 mpg, respectively.
 
 
+
+
