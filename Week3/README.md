@@ -37,7 +37,7 @@ Here, aov is the name of the function that fits an analysis of variance model. T
 summary(fit)
 ```
 
-
+![Model summary](./ModelSummary.jpg)
 
 
 
