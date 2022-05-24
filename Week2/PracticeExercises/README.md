@@ -89,7 +89,7 @@ esoph$age_group = recode(esoph$age_group, '25-34' = "23-34")
 
 2.10) How could you adapt the code above to recode all instances of "0-9g/day" to "1-9g/day" in the tobacco_consum column?
 
-2.11) A few cases and controls were later added to the study. Specifically, there were 3 additional cases and 3 additional controls in the category: "35-44" age, 0-39g/day alcohol consumption and 10-19 tobacco consumption (i.e., row 17). How could we alter this in the dataset?
+2.11) A few cases and controls were later added to the study. Specifically, there were 3 additional cases and 3 additional controls in the category: "35-44" age, 0-39g/day alcohol consumption and 10-19 tobacco consumption (i.e., row 17). How could you alter the dataset to reflect this?
 
 
 
