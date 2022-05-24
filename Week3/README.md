@@ -114,6 +114,73 @@ From the model output we see that the Honda Roaster and VolvoP1900 are predicted
 
 
 
+## Section 2: Data Visualization ##
+
+There are MANY types of plots we can create in R. Some common examples include:
+boxplots, scatterplots, piecharts, histograms, heat maps, linecharts
+
+As with statistical analyses, the goal here is simply to become familiar with the variety of tools that exist for plotting, and to learn to use the help documentation and online examples to make use of the ones we want. 
+
+We will just go through a couple basic examples so you get the feel for how these functions work and see what arguments you typically provide in the plotting functions.
+
+### Boxplot Example ###
+
+Lets return to the ChickWeight example from above. After running the ANOVA,  we'd now like to visualize differences in chick weight based on their diets. We can do this by creating a boxplot.
+
+```
+boxplot(ChickWeight$weight ~ ChickWeight$Diet)
+#OR
+boxplot(weight ~ Diet, data = ChickWeight) # exact same result but different way to code it
+```
+Notice that the arguments used above are structured similarly to the ANOVA
+
+![boxplot1](./ChickWeightPlot1.jpeg)
+
+Without having added any additional arguments to the boxplot command, this is the plot we get. There are lots of adjustments we can make to this plot including adding a title, changing the box color, changing the axis limits, changing the text labels, etc.
+
+```
+boxplot(weight ~ Diet, data = ChickWeight,
+        main = "Chick weight based on diet",    # Adds a tile
+        col = c("red", "green", "blue", "yellow"),   # Adds color
+        ylim = c(0, 400),  # Adds y-axis bounds (xlim does the same for x-axis)
+        xlab = "Chick diet 1-4",   # change the x-axis title
+        ylab = "Chick weight in g", # change the y-axis title
+        cex.main = 2 # increase the size of the title text by a factor of 2
+        cex.lab = 1.5) # increase the size of the axes labels by a factor of 1.5
+```
+![boxplot2](./ChickWeightPlot2.jpeg)
+
+Much better! Although the colors could always be prettier. Here's a nice guide to the various color options available in R: https://www.nceas.ucsb.edu/sites/default/files/2020-04/colorPaletteCheatsheet.pdf
+
+
+### Scatterplot Example ####
+
+plot(mpg ~ wt, data = mtcars)
+
+# Again, spruce it up
+plot(mpg ~ wt, data = mtcars,
+     main = "Mpg based on car weight",
+     col = "black",   # Lots of color options in R -- can google to find others
+     pch = 16,    # changes the plotting "symbol"
+     xlab = "Car Weight (1000 lbs)",
+     ylab = "Miles per gallon")
+
+# We can also add a line of best fit based on our model call
+Model2= lm(mpg~ wt, data = mtcars)
+abline(Model2, col = "red")  # abline functino adds straight lines to plot
+text(x = 4.8, y= 31.6, labels = "R2 = 0.753")  # add text
+
+### ggplot ####
+
+# There is another method for plotting -- ggplot
+
+# install.packages("ggplot2")
+library(ggplot2)
+
+ggplot(mtcars, aes(x=wt, y=mpg)) +
+  geom_point(size=4, shape= 1, col = "darkred") + 
+#geom_text(label=rownames(mtcars)) + 
+  geom_smooth(method=lm, se = FALSE, linetype = "dashed")
 
 
 
