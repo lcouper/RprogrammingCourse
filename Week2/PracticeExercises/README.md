@@ -76,3 +76,22 @@ library(datasets)
 dcast(esoph, age_group ~ alcohol_consump, sum)
 ```
 Do you notice any patterns here with alcohol consumption by age categories? 
+
+2.8) How could you adapt the code above to see how many controls are included in each combination of age class and *tobacco* consumption levels?
+
+2.9) We later learn that the age categories were coded incorrectly -- the "25-34" category should instead read "23-34." Use the code below, which makes use of the 'recode' function (in the dplyr package) to "recode" all instances of 25-34 to the proper 23-34. Check that this worked by viewing the dataset.
+
+```
+install.packages("dplyr") # install dplyr package
+library(dplyr) # load package
+esoph$age_group = recode(esoph$age_group, '25-34' = "23-34")
+```
+
+2.10) How could you adapt the code above to recode all instances of "0-9g/day" to "1-9g/day" in the tobacco_consum column?
+
+2.11) A few cases and controls were later added to the study. Specifically, there were 3 additional cases and 3 additional controls in the category: "35-44" age, 0-39g/day alcohol consumption and 10-19 tobacco consumption (i.e., row 17). How could we alter this in the dataset?
+
+
+
+
+
