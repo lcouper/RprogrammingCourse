@@ -47,3 +47,30 @@ hist(Melted$value)
 
 1.13) What is this plot showing you? 
 1.14) How did "melting" the data frame enable us to create this plot?
+
+
+### 2. Data reshaping: esophageal cancer example ###
+
+2.1) Load the 'esoph' data in R using the code below. The 'esoph' data in R contains records on 88 age/alcohol/tobacco combinations from a case-control study in France. Check out tht following page for information on what's contained in this datase: https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/esoph.html
+
+```
+library(datasets)
+# Note that the 'esoph' data set is now automatically loaded and is stored in a variable called "esoph"
+```
+
+2.2) To start, lets change the column names to be more informative. Change the column names to: "age_group", "alcohol_consump", "tobacco_consump", "num_cases", "num_controls"
+
+2.3) Check the class of the 'tobacco_consump' column. What does it mean for a factor to be ordered?
+
+2.4) Lets say we are only interetsed in looking at records for 25-34 year olds. Create a new variable "youngest" and store just these records here
+
+2.5) What is the *least common* level of alcohol consumption among the 25-34 year olds?
+
+2.6) How many total cases are included in the 'youngest' age category? How many total controls?
+
+2.7) Returning to the full data (i.e., all age classes), use the following code to see how many controls are included in each combination of age class and alcohol consumption levels:
+
+```
+dcast(esoph, age_group ~ alcohol_consump, sum)
+```
+Do you notice any patterns here with alcohol consumption by age categories? 
