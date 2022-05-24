@@ -94,7 +94,7 @@ We can also use examine the appropriateness of this "best" model by looking at r
 plot(step.model)
 ```
 
-![Model summary](./ModelOutput4.jpg)
+![Model summary](./ModelOutput4.jpeg)
 
 Lets say we received data about two new cars that are being made and we wanted to *predict* their gas mileage based on their horsepower and weight.
 We can do that using the information from the model we ran above. 
