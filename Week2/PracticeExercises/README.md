@@ -45,7 +45,9 @@ Ricks = arrange(mdt, Rickettsia)
 hist(Melted$value)
 ```
 
+
 1.13) What is this plot showing you? 
+
 1.14) How did "melting" the data frame enable us to create this plot?
 
 
