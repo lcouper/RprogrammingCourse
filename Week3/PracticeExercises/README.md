@@ -63,6 +63,7 @@ Which site has the fewest actual ticks compared to expections?
 ```
 AIC(model1)
 AIC(model2)
+```
 
 1.15) We'd now like to see if there is a difference in the tick counts in the northern vs southern sites. Split up these two parts of the dataset using the subsetting methods we discussed last week. Call one subset "North" and the other "South". To get you started, here is the code for the "North" subset:
 ```
@@ -91,41 +92,64 @@ What data class is SizeCat?
 1.21) Since there are "levels" associated with this size category data, we want R to treat this variable as a *factor* rather than character data. Convert SizeCat to a factor, and overwrite the original vector (i.e save it as SizeCat)
 
 
+1.22) Lets add this variable to our Ticks dataframe using the cbind function and store this output in a new data frame called "Ticks2"
 
-# 1.16
-# Now cbind the SizeCat vector onto the Ticks dataframe 
-# And store this output in a new data frame called "Ticks2"
+1.23) What are the dimensions (i.e., number of rows and columns) of this new 'Ticks2' data frame?
 
-# 1.17
-# Run an ANOVA to see if host diversity relates to site size based on the new site size category
-# Also create a boxplot of host diversity broken down by SizeCat
+1.24) Lets say we want to understand if host diversity varies between small, medium, and large sites. Run an ANOVA using the host diversity as the dependent variable and new site size category as the grouping variable. Is there a statistically significant difference between differently sized sites?
 
-# 1.17.1
-# The mean value for tick counts based on size are:
-# 71 at LARGE, 65 at MED, and 41.75 at SMALL
-# Create a vector containing these values (e.g. x = c(71, 65, 41.75))
-# And create a pie chart displaying this data
-# Include a label for each slice indicating the size of the site
+1.25) Lets visualize these differences using a boxplot: Create a boxplot showing host diversity for each site size category. Alter the box colors so each box (i.e., each site size category) is a different color. How do these two methods -- running an ANOVA and creating a boxplot -- inform our understanding of whether host diversity varies by site size categories?
 
-# 1.18
-# We are curious how the rat counts and mouse counts compare across sites
-# Calculate the Pearon's correlation coefficient between these two columns
-# (Will probably require googling what function to use unless you are a very good guesser)
-# Also calculate the Pearson's correlation between rat counts and deer counts
+1.26) Use the following code to calculate the mean tick abudance based on site size:
+```
+tapply(X = Ticks2$TickCount, INDEX = Ticks2$SizeCat, FUN = mean)
+```
+We see that the mean tick abundances are: 71 for large sites, 65 for medium sites, and 41.75 for small sites. Create a vector containing these values (name the vector whatever you like).
 
-# 1.19
-# We also obtain some historic data about tick counts at these same sites
-# This data is stored in the following column:
+1.27) Modify the code below to create a pie chart displaying the mean tick counts by site size. Include a label for each slice indicating the size of the site
+```
+labels = c("Large", "Med", "Small")
+pie(mean_counts, labels = labels, col = c("darkblue", "blue", "lightblue"),   # notice "mean_counts" refers to what I named my vector. This may be different for you
+    main = "Tick Counts By Site")
+```
+What did the "labels" function do here?
 
+1.28) Lets say we are curious about whether the rat counts and mouse counts vary similarly across sites (i.e., whether or not they are correlated). Calculate the Pearon's correlation coefficient between these two columns using the code below:
+```
+cor(Ticks$RatCount, Ticks$MouseCount)
+```
+What is the correlation? What does this mean practically? (i.e., do rats and mice tend to vary similarly across sites?)
+
+1.29) Modify the code above to calculate the Pearson's correlation between rat counts and *deer* counts. Are these two species more or less strongly correlated?
+
+1.30) Lets say we just obtained some historical data about tick counts at these same sites. This data is stored in the following column:
+```
 Counts1998 = c(21, 9, 13, 14, 27, 18, 6, 15, 10, 11, 4, 29, 18, 7, 18, 19)
+```
+What class is the Counts1998 variable? How is this class different from the 'integer' class?
 
-# Perform a chi-squared test on Counts1998 and the current Tick Counts
-# to test if they are different. What does the test output indicate?
+1.31 Lets see if there is a difference in ticks counts at our sites from 1998 to today. To do this statistically, we can use a 'chi-squared test'. Follow the code below to conduct a chi-squared test examining the difference between Counts1998 and our current data:
+```
+chisq.test(Counts1998, Ticks$TickCount)
+```
+What does the test output indicate?
 
-# 1.20
-# Create side-by-side histograms from the two years using the following code:
+1.32 Now lets visualize the difference in tick abundances between 1998 and today. Create side-by-side histograms from the two years using the following code:
+```
 par(mfrow = c(1,2))
 hist(Counts1998,col = "pink")
 hist(Ticks$TickCount, col = "skyblue")
+```
+What did the "par" function do? How do the 2 distributions compare?
 
-# What did the "par" line do? How do the 2 distributions compare?
+### 2. Self-guided analysis and plotting ### 
+
+If you have any data from an independent project, or access to a dataset you're interested in exploring, I encourage you to explore basic stats & plotting on this data! Otherwise, try loading and exploring an R dataset of your interest. You can explore datasets contained in the 'datasets' package here:
+https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html. Look through these options and see if any interset you. 
+Then import and view that dataset
+```
+# Example:
+library(datasets)
+View(airquality)
+```
+If the column names are uninformative, you can also google the name of the dataset to get more info. Get a sense for what type of data you're working with and what types of plots/stats may be useful. Then try doing some exploratory plotting/ preliminary stats on that dataset. There are no wrong answers here!
