@@ -187,7 +187,7 @@ text(x = 4.8, y= 31.6, labels = "R2 = 0.753")  # add text to the plot indicating
 ![boxplot2](./mtcarsPlot3.jpeg)
 
 
-## Data visualation method 2: ggplot ###
+## Data visualization method 2: ggplot ###
 
 There is another plotting package commonly used in R, called 'ggplot.' It takes a bit more getting used to (the syntax can be tricky), but some people prefer it because it gives you more control over the different plotting parameters. [If using ggplot feels overwhelming right now, that's ok! Plenty of people just use the base R plotting functions to create beautiful visualizations.]
 
