@@ -161,6 +161,7 @@ plot(mpg ~ wt, data = mtcars)
 # Notice that the command to create a scatterplot is simply "plot" 
 ```
 ![boxplot2](./mtcarsPlot1.jpeg)
+
 Without adding any additional plotting arguments, this is the plot we get.
 
 As in the boxplot example, we can spruce up this plot by adding arguments to the plot function.
@@ -186,17 +187,26 @@ text(x = 4.8, y= 31.6, labels = "R2 = 0.753")  # add text to the plot indicating
 ![boxplot2](./mtcarsPlot3.jpeg)
 
 
-### ggplot ####
+## Data visualation method 2: ggplot ###
 
-# There is another method for plotting -- ggplot
+There is another plotting package commonly used in R, called 'ggplot.' It takes a bit more getting used to (the syntax can be tricky), but some people prefer it because it gives you more control over the different plotting parameters. [If using ggplot feels overwhelming right now, that's ok! Plenty of people just use the base R plotting functions to create beautiful visualizations.]
 
-# install.packages("ggplot2")
+Let's use ggplot to create a scatterplot using the mtcars dataset.
+
+```
+install.packages("ggplot2")
 library(ggplot2)
 
-ggplot(mtcars, aes(x=wt, y=mpg)) +
-  geom_point(size=4, shape= 1, col = "darkred") + 
-#geom_text(label=rownames(mtcars)) + 
-  geom_smooth(method=lm, se = FALSE, linetype = "dashed")
+ggplot(mtcars, aes(x=wt, y=mpg)) +     # aes here refers to 'aesthetics'
+  geom_point(size=4, shape= 1, col = "red") +  # add points to the plot, specificying the size, shape, and color  
+geom_text(label=rownames(mtcars), size = 2) +          # add labels next to the plotted points
+  geom_smooth(method=lm, se = FALSE, linetype = "dashed", col = "black") +   # add a line of best fit to the plot
+  labs(x = "weight", y = "gas mileage")  +   # adds x and y axis labels
+  theme_bw()     # controls the "theme" for the plot. Other options include theme_minimal(), theme_light(), theme_dark(), theme_classic(), etc.
+``` 
+Unlike the previous plotting functions we saw, ggplot uses the '+' command to add additional components to the plot.
+
+![boxplot2](./ggplot1.jpeg)
 
 
 
