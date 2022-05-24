@@ -65,21 +65,31 @@ summary(model)
 ```
 ![Model summary](./ModelOutput2.jpg)
 
-We can see we get estimates of the coefficients, pvalues, info about the R^2, etc.
+We can see we get estimates of the coefficients, pvalues, info about the R^2, etc. 
+But we're not sure that this is the best model (i.e., we may be missing variables or including unnecessary variables), so we want to do a process called 'variable selection' to figure this out. We can do this using tools in the "MASS" package (which you may have already installed)
 
-# But we're not sure this is the best model... want to do variable selection to figure this out
-# Can do this using tools in the "MASS" package which you may have already installed
-# install.packages("MASS")
+```
+install.packages("MASS")
 library(MASS)
 
+```
+Now we can use 'stepAIC' function to perform step-wise variable selection. In essense, this process adds or removes independent variables (in a step-wise fashion) to see what combination produces the "best" model.
+Take a look at the help documentation for this function to see what arguments are needed to run stepAIC. 
+
+```
+?stepAIC
+```
+Here, we can see the 'direction' argument indciates whether we want variables to be iteratively *added* ("forward"), *removed* ("backward"), or some combination ("both"). If this argument is left blank, the default is backward. If the AIC of the new model (after adding or removing variables) is lower, it keeps going in that direction.
+Now lets run the model and insepct the output
+
+```
 step.model = stepAIC(model, direction = "both")
-# The stepAIC function provides step-wise variable selection
-# If the AIC of the new model (after adding or removing variables) is lower, it keeps going in that direction
-
-# Look at the output of this model selection process by again using the summary tool
 summary(step.model)
+```
+![Model summary](./ModelOutput3.jpg)
+We see that the "best" model includes just horsepower and weight as predictors.
 
-# Can also examine the appropriateness of the model by looking at residuals:
+We can also use examine the appropriateness of this "best" model by looking at residuals:
 plot(step.model)
 # If you wanted to compare AIC of your original model to your new model from variable selection
 
