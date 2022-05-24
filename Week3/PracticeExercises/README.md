@@ -30,89 +30,67 @@ Using the output from the code above and the help documentation, can you figure 
 
 1.5) Take a look at the distribution of tick count by creating a histogram of the tick count column. Feel free to add any other plotting arguments to spruce up your plot!
 
-# 1.3) 
-# With this dataset, we're curious about what factors relate to the tick counts at a site
-# To start, plot the tick counts against the deer counts (a scatterplot)
-# Does there appear to be any relationship between these variables?
+1.6) Lets say we're curious about what factors influence the tick counts at a site. To start, plot the tick counts against the deer counts (with a scatterplot). Does there appear to be any relationship between these variables?
 
-# 1.4) 
-# Lets do the same for the site size (i.e. plot tick counts against site size)
-# Create a title for this plot, change the plotting symbols and colors to something different (whatever you want)
-# Add a line of best fit to your plot
-# Does there appear to be a relationship here?
+1.7) Lets do the same for the site size (i.e. create a scatterplot of tick counts against site size). Create a title for this plot, change the plotting symbols and colors to something different (whatever you want), and edit the x and y axes labels. Add a line of best fit to your plot. Does there appear to be a relationship here?
 
-# 1.5)
-# Create a linear model of tick counts starting with the predictor variables:
-# site size, host diversity, and lizard counts
-# Save this model call into a variable called "model1"
-# Examine the output of model1 using the 'summary' function
-# How "good" is this model? (A subjective question, but can be answered based on R2, pvalue, plot of residuals, etc)
+1.8) Lets investigate this relationship between tick counts and site size further. Use the code below to create a linear model of tick counts starting with the predictor variables: site size, host diversity, and lizard counts. Examine the output of model1 using the 'summary' function. How "good" is this model? (A subjective question, but can be answered based on R2, pvalue, plot of residuals, etc)
 
-# 1.6)
-# Create a new data frame with just the site size, host diversity, and lizard count info
-# using the code below:
+```
+model1 = lm(TickCount ~ SiteSize + HostDiversity + LizardCount, data = Ticks)
+```
 
+1.9) Lets hone in on these variables. Create a new data frame with just the site size, host diversity, and lizard count info and alter the column names using the code below:
+
+```
 Actual = as.data.frame(cbind(Ticks$SiteSize, Ticks$HostDiversity, Ticks$LizardCount))
+colnames(Actual) = c("SiteSize", "HostDiversity", "LizardCount")
 View(Actual)
+```
 
-# Add the column names "SiteSize", "HostDiversity" and "LizardCount" to this dataset
-# It's important to match the case & spacing of the above names in order for the next step to work
+1.10) Now lets say we want to "predict" the number of ticks we'd find at a new site given it's size, host diversity and lizard abundance. Follow the code below, which makes use of the "predict.lm" function to get estimated tick counts and store them in a new variable called "PredictTicks"
 
-# 1.7)
-# Now use the "predict.lm" function to get estimated tick counts
-# based on the site size, host diversity, and lizard counts for each site
-# Store the predicted values in a variable called "PredictTicks"
+1.11) Lets see how good our model was at "predicting" tick counts: Plot the *actual* tick counts against the *predicted* tick counts (with a scatterplot). Add a regression line (for a model of actual tick counts against predicted tick counts) to this plot in red
 
-# 1.8)
-# Now plot the actual tick counts against the predicted tick counts (a scatterplot)
-# Add a regression line (for a model of actual tick counts against predicted tick counts)
-# to this plot in red
+1.12) Lets measure the difference in the actual tick counts and the predicted tick counts for each site. Create a new variable called "Diff" which subtracts the Actual from the predicted
 
-# 1.9) 
-# Lets measure the difference in the actual tick counts and the predicted tick counts for each site
-# Create a new variable called "Diff" which subtracts the Actual from the predicted
+1.13) Use the sort function on the Diff variable to see:
+Which site has the most actual ticks compared to expectations?
+Which site has the fewest actual ticks compared to expections?
 
-# 1.10)
-# Use the sort function on the Diff variable to see:
-# Which site has the most actual ticks compared to expectations?
-# Which site has the fewest actual ticks compared to expections?
+1.14) Now lets say we'd like to incorporate deer counts into our model, because we know deer are an important host of adult ticks. Create a new model (call it model2) with the same predictors as before but adding in 'DeerCounts'. Compare the 'AIC' of these 2 models using the code below. [Model AIC is a measure of how "good" the model is, with lower AIC indicating a better model]. Based on the AIC values, which model is better?
 
-# 1.10.1) We'd like to incorporate deer counts into our model.
-# Create a new model (call it model2) with the same predictors as before
-# but adding in DeerCounts
-# Compare the AIC of these 2 models -- which is better?
+```
+AIC(model1)
+AIC(model2)
 
-# 1.11) 
-# We'd now like to see if there is a statistical difference in the tick counts
-# in the northern vs southern sites
-# Split up these two parts of the dataset (using the subsetting commands we learned last week)
-# Call one subset "North" and the other "South"
+1.15) We'd now like to see if there is a difference in the tick counts in the northern vs southern sites. Split up these two parts of the dataset using the subsetting methods we discussed last week. Call one subset "North" and the other "South". To get you started, here is the code for the "North" subset:
+```
+North = Ticks[Ticks$SiteLocation == "North",]
+```
 
-# 1.12)
-# Use the "t.test" function to compare tick counts from these two groups
-# Hint: the first argument to the t.test function should be the tick count
-# column from the North group, and the second argument is the tick count column
-# from the South group
+1.16) Lets dig into this further and see if there is a statistically significant difference in tick counts between Northern and Southern sites. Use the "t.test" function to compare tick counts from these two groups [Hint: the first argument to the t.test function should be the tick count column from the North group, and the second argument is the tick count column from the South group]. 
 
-# 1.13)
-# What are the sample estimates of the mean for each site? 
-# Is there a statistical difference in tick counts based on sample location?
+1.17) Looking at the t.test output -- what is the estimated mean tick abundance at the Northern and Southern sites? 
 
-# 1.14)
-# Instead of breaking apart the data to run the t-test as we've done above,
-# we could have also used the code below to achieve the same result:
+1.18) Is there a statistical difference in tick counts based on sample location? (lets use whether or not p < 0.05 as a guide)
+
+1.19) Instead of breaking apart the data to run the t-test as we've done above, we could have also used the code below to achieve the same result:
+```
 t.test(Ticks$TickCount ~ Ticks$SiteLocation)
-# What would have happened if we had tried to adapt the above code to 
-# run a t.test on tick counts based on the rat counts? (i.e. why doesn't this work?)
+```
+Can you adapt the code above to run a t.test on tick counts based on the rat counts? [Hint: you will get an error] Why didn't this work?
 
-# 1.15
-# We later decided to create categories for the sites based on their relative sizes
-# The new data is stored in this vector:
+1.20) We later decided to create categories for the sites based on their relative sizes. The new data is stored in this vector:
+```
 SizeCat = c("Med", "Large", "Med", "Large", "Large", "Large", "Small", "Small", 
             "Med", "Large", "Med", "Med", "Small", "Large", "Small", "Med")
+```
+What data class is SizeCat?
 
-# What class is SizeCat?
-# Convert SizeCat to a factor, and overwrite the original vector (i.e save it as SizeCat)
+1.21) Since there are "levels" associated with this size category data, we want R to treat this variable as a *factor* rather than character data. Convert SizeCat to a factor, and overwrite the original vector (i.e save it as SizeCat)
+
+
 
 # 1.16
 # Now cbind the SizeCat vector onto the Ticks dataframe 
