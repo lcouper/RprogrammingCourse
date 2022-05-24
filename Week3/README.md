@@ -39,6 +39,6 @@ summary(fit)
 
 ![Model summary](./ModelSummary.jpg)
 
-
+The model output shows there is a significant difference in chick weight based on diet.
 
 #### Multiple regression Example ####
