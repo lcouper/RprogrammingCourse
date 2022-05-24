@@ -90,26 +90,26 @@ summary(step.model)
 We see that the "best" model includes just horsepower and weight as predictors.
 
 We can also use examine the appropriateness of this "best" model by looking at residuals:
+```
 plot(step.model)
-# If you wanted to compare AIC of your original model to your new model from variable selection
+```
 
-AIC(model)
-AIC(step.model)
-BIC(model)
-BIC(step.model)
+![Model summary](./ModelOutput4.jpg)
 
-# If we had data about some new car that's being made and we wanted to predict their gas mileage,
-# we can do that using this model output
-# Example new data:
+Lets say we received data about two new cars that are being made and we wanted to *predict* their gas mileage based on their horsepower and weight.
+We can do that using the information from the model we ran above. 
 
+```
+# First we input the data about two new cars:
 HondaRoadster = c(145, 2.7) # horse-power and weight
 VolvoP1900 = c(150, 4.2)
 NewCars = as.data.frame(rbind(HondaRoadster, VolvoP1900))
 colnames(NewCars) = c("hp", "wt")
 View(NewCars)
 
-# Now use the predict.lm function to predict the mpg based on the known horsepower and weight
 predict.lm(step.model, NewCars)
-# Obtain predicted values for mpg based on inputs
+```
+Here, the predict.lm function uses the relationship between horsepower, weight, and gas mileage modeled from data we had about other cars to *predict* the gas mileage of two new cars based solely on their horsepower and weight. 
+From the model output we see that the Honda Roaster and VolvoP1900 are predicted to get 22.15 and 16.17 mpg, respectively.
 
 
