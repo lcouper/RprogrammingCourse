@@ -155,20 +155,36 @@ Much better! Although the colors could always be prettier. Here's a nice guide t
 
 ### Scatterplot Example ####
 
+Lets return to the mtcars dataset and visualize the relationship between gas milesage and weight with a scatterplot.
+```
 plot(mpg ~ wt, data = mtcars)
+# Notice that the command to create a scatterplot is simply "plot" 
+```
+![boxplot2](./mtcarsPlot1.jpeg)
+Without adding any additional plotting arguments, this is the plot we get.
 
-# Again, spruce it up
+As in the boxplot example, we can spruce up this plot by adding arguments to the plot function.
+```
 plot(mpg ~ wt, data = mtcars,
-     main = "Mpg based on car weight",
-     col = "black",   # Lots of color options in R -- can google to find others
+     main = "Effect of car weight on gas milesage",
+     col = "#9F2B68",   # notice that we can supply a hexcode or a color name 
      pch = 16,    # changes the plotting "symbol"
+     cex = 1.8,    # increase the size of the plotting symbol
      xlab = "Car Weight (1000 lbs)",
      ylab = "Miles per gallon")
+```
 
-# We can also add a line of best fit based on our model call
-Model2= lm(mpg~ wt, data = mtcars)
-abline(Model2, col = "red")  # abline functino adds straight lines to plot
-text(x = 4.8, y= 31.6, labels = "R2 = 0.753")  # add text
+![boxplot2](./mtcarsPlot2.jpeg)
+
+We can also add a line of best fit to the plot, using the linear model command we used above.
+```
+Model2 = lm(mpg~ wt, data = mtcars)
+abline(Model2, col = "red")  # the abline function adds straight lines to a plot
+text(x = 4.8, y= 31.6, labels = "R2 = 0.753")  # add text to the plot indicating the R2 (correlation). 
+# The x and y arguments above denote where on the plot to place the text
+```
+![boxplot2](./mtcarsPlot3.jpeg)
+
 
 ### ggplot ####
 
