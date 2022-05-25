@@ -83,6 +83,49 @@ Since we did not specify any additional if/else commands, we're essentially tell
 
 In addition to for loops, there are also loops called "while loops" which perform some command *while* a certain condition is met. You will get some practice with these in the exercises.
 
+## Writing Functions ##
 
+As we have seen, R has **many** built-in functions like: mean, rbind, View, summary, etc. 
+But there may be times where you want to do something specific to your data for which a function does not already exist. For this, you can write your own function! 
+
+Lets return to the Celsius to Farenheit conversion example above. After some quick googling, it appears there is no function that already does this included in base R. Lets write one ourselves and call the function "CtoF"
+
+Similar to for loops, it can help by first writing out the code you'd like to run on a single value as a test case. 
+For example:
+```
+farenheit = temps[1]*9/5 + 32
+```
+Now lets build on this to write our function.
+```
+CtoF = function(x) {     
+farenheit = x * 9/5 + 32
+print(farenheit)}   # tell R to "print" or output the result of the function
+```
+Functions will always have the general structure used above -- the name of your function (whatever you want to call it), followed by "function(x)" where 'x' refers to the number of inputs. Note that here the function just takes in one input -- a value in Celsius -- but we can write functions that take multiple inputs as we'll see below. After that you simply write out what you want your function to do with the supplied input. Often the last line will be print(something) or return(something) indicating that we want the output of the funciton to be 'returned' to us rather than hidden in some variable.
+
+Lets check that our function worked by trying it on some data. We can input either a single data point, or a list of data points.
+
+```
+CtoF(30.2)                        # convert the Celius value '30.2' into Farenheit
+CtoF(c(30.2, 19.2, 29.8, 40.6))   # convert this list of values into Celsius
+CtoF(temps)                       # convert all the values in the vector 'temps', which we defined above, into Farenheit 
+```
+
+# Can also add in if/else statements, and make fun error messages
+CtoF = function(x)
+{if (x <= 100) {farenheit = x*9/5 + 32
+print(farenheit)}
+  else {print("Too hot!!!")}}
+
+# Can create functions with mulitple inputs
+
+# Example: BMI function
+# Create a function to calculate body mass index given weight (in lbs) and height (in inches)
+# x = weight input, y = height input
+BMI = function(x,y)
+ { x / (y^2) * 703}
+  
+# Use the function with first input being weight, second being height (in inches)
+BMI(150, 60)
 
 
