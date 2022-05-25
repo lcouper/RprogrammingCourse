@@ -41,7 +41,7 @@ farenheit # Check that our for loop worked by taking a look at the farenheit vec
 For loops will always have the general structure above -- the command 'for' followed by (i in #:#) followed by a command to apply over that range.
 Here are the general steps I like to use when constructing a for loop:
 
-**General steps:##
+**General steps:**
 1) Write out the code for a single case
 2) Create any empty vector for your new values to live
 3) Identify and Sst the # of times for the loop to run
