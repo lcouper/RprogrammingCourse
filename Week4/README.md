@@ -83,7 +83,7 @@ Since we did not specify any additional if/else commands, we're essentially tell
 
 In addition to for loops, there are also loops called "while loops" which perform some command *while* a certain condition is met. You will get some practice with these in the exercises.
 
-## Writing Functions ##
+## Section 3: Writing Functions ##
 
 As we have seen, R has **many** built-in functions like: mean, rbind, View, summary, etc. 
 But there may be times where you want to do something specific to your data for which a function does not already exist. For this, you can write your own function! 
@@ -111,21 +111,36 @@ CtoF(c(30.2, 19.2, 29.8, 40.6))   # convert this list of values into Celsius
 CtoF(temps)                       # convert all the values in the vector 'temps', which we defined above, into Farenheit 
 ```
 
-# Can also add in if/else statements, and make fun error messages
-CtoF = function(x)
-{if (x <= 100) {farenheit = x*9/5 + 32
-print(farenheit)}
-  else {print("Too hot!!!")}}
+We can also do things like add if/else statements to our function or make fun error messages.
+For example:
+```
+CtoF2 = function(x) {
+ ifelse(x <= 50,  x*9/5 + 32, "Too hot!!") 
+  }
+```
 
-# Can create functions with mulitple inputs
+The ifelse command we used above tells R that if the input is less than or equal to 50, convert it to Farenheit, otherwise (i.e., if its above 50), print the error message "Too hot!!!"
+We can again try running this new function CtoF2 on some data to check that it worked.
 
-# Example: BMI function
-# Create a function to calculate body mass index given weight (in lbs) and height (in inches)
-# x = weight input, y = height input
-BMI = function(x,y)
- { x / (y^2) * 703}
-  
-# Use the function with first input being weight, second being height (in inches)
-BMI(150, 60)
+```
+x = c(40.3, 21, 19, 77.0)
+CtoF2(x)
+```
+As mentioned above, we can also create functions with mulitple inputs. For example, lets say we have the weight and height for a few individual dogs from which we want to calculate body mass index (BMI). 
+
+Here is one way we could write a function in R to do this calculation:
+```
+BMI = function(x,y)   
+ {bmi =  x / (y^2) * 703
+ return(bmi)}
+```
+Note that we named the function "BMI". We created this as a function that takes two inputs --  the first input ("x") being the weight value (in pounds), and the second input ("y") being the height (in inches).
+Lets now use this function to calculate the BMI for these dogs given the weights and heights listed below.
+```
+dog_wt = c(38.4, 132.2, 79.0, 83.9, 72.7)
+dog_ht = c(41.2, 68.0, 68.5, 39.9, 38.2)
+
+BMI(dog_wt, dog_ht)
+```
 
 
