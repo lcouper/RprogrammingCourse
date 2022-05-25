@@ -81,5 +81,8 @@ View(times)                                            # check that the loop wor
 Since we did not specify any additional if/else commands, we're essentially telling R not to do anything to the times associated with Course A. Notice that in this example, we chose to overwrite the original times vector. However we could have also created a new vector ("TimesCorrected", for example) and stored the corrected times there instead.
 
 
+In addition to for loops, there are also loops called "while loops" which perform some command *while* a certain condition is met. You will get some practice with these in the exercises.
+
+
 
 
