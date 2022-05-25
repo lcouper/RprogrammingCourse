@@ -5,9 +5,9 @@
 By the end of the course, students will feel confident using R for basic data analysis and visualization. Namely, students will be able to: manipulate data sets, find and install packages, conduct preliminary statistical analyses, and create basic visualizations.
 
 ## Course Format ##
-In-person instruction (2 hours / per week) consisting of a short content introduction, followed by individual/group work on exercises in R using biological data sets. Exercises will be completed outside of class time and are expected to take an additional 2 hours/week. There are no formal evaluations. No prior programming experience is required or expected.
+In-person instruction (2 hours / per week) consisting of a short content introduction, followed by individual/group work on exercises in R using biological data sets. Exercises will be completed outside of class time and are expected to take an additional 2 hours/week. Exercises are intended to be challenging and to extend beyond what is introduced in class. To complete the exercise, students are encouraged to use any and all resources including consulting each other, online help pages (e.g., stackoverflow, r-bloggers, etc.) and the instrutor. There are no formal evaluations. No prior programming experience is required or expected. 
 
-## Course Overview ##
+## Course Schedule ##
 
 | Week | Topic | 
 | :---- | :---- | 
