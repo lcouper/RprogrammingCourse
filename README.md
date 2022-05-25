@@ -13,7 +13,6 @@ In-person instruction (2 hours / per week) consisting of a short content introdu
 | :---- | :---- | 
 | 1 | Introduction to R and its use in biological research, Navigating R Studio , Importing data sets & basic summary stats | 
 | 2 | Data manipulation | 
-| 3 | Data structures and re-shaping | 
-| 4 | Data structure and re-shaping cont. | 
-| 5 | Basic statistical analysis -- summary statistics, t.tests, chi-squared | 
-| 6 | Intermediate statistical analysis -- linear regression |
+| 3 | Basic statistical analysis and plotting -- summary statistics, t.tests, chi-squared | 
+| 4 | An intro to 'advanced' topics in R -- for loops, if/else statements, writing functions |
+| 5 | Group project on a biological dataset of your choosing |
