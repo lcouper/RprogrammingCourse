@@ -35,16 +35,46 @@ Now that we have created an empty vector, we can begin converting Celius values 
 Here's what a for loop looks:
 ```
 for (i in 1:6)  # This indicates the range over which you want to iterate
-{farenheit[i] = temps[i] * 9/5 + 32}  # This indicates the function you want performed over that range
+{farenheit[i] = temps[i] * 9/5 + 32}  # This indicates the function you want performed over that range. Note the use of { } and the use of "i" in the index
 farenheit # Check that our for loop worked by taking a look at the farenheit vector 
 ```
-For loops will always have the general structure above -- the command 'for' followed by (i in #:#) followed by a command to apply over that range.
-Here are the general steps I like to use when constructing a for loop:
+For loops will always have the general structure above -- the command 'for' followed by (i in #:#) followed by a command (bracketed by curly braces) to apply over that range. Here are the general steps I like to use when constructing a for loop:
 
 **General steps:**
 1) Write out the code for a single case
 2) Create any empty vector for your new values to live
 3) Identify and Sst the # of times for the loop to run
 4) Provide the code to be repeated from step 1, but update it for a general case
+
+Some more examples of basic for loops can be found here: https://www.w3schools.com/r/r_for_loop.asp
+
+
+## Section 2: if/else Statements ##
+
+if/else statements are logic statements telling R whether or not to run a command *based on whether some other condition is met*
+For example:
+```
+x = 5
+if (x >10){print(x)
+} else {print(10)}   # Since x is not > 10, R goes to the "else" part and prints out the number 10
+```
+In the above code, we told R: *if* the value of x is greater than 10, print x, otherwise print the value "10".
+
+if/else statements are often used *inside* for loops as a way to tell R to repeat a command *based on* some condition
+For example, say we have the following 100m dash times, some of which were measured at Course 1 and some of which were measured at Course 2. We'll start by combining all of this information into a dataframe
+```
+Times = c(12.4, 12.2, 12.7, 11.9, 13.4, 12.9, 13.1, 11.6, 12.1, 13.0)
+Course = c("Course1", "Course1", "Course2","Course1","Course2",
+           "Course1","Course2","Course1", "Course1","Course2")
+DashTimes = as.data.frame(cbind(Course,Times))
+View(DashTimes)
+```
+We learn that there was a strong headwind at Course 2, making runners times slightly slower than they may have been otherwise. To correct for this, we want to **subtract 0.2 seconds** to all times that were **measured at Course 2**.
+Here is how we could do that using an if/else statement and for loop in r:
+```
+for (i in 1:10)   # We choose 10 here because there are 10 times listed in the "Times" vector
+  {if(Course[i] == "Course2")   # set up the "if" condition
+  {Times[i] = Times[i]-0.2}
+```
 
 
