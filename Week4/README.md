@@ -61,20 +61,25 @@ if (x >10){print(x)
 In the above code, we told R: *if* the value of x is greater than 10, print x, otherwise print the value "10".
 
 if/else statements are often used *inside* for loops as a way to tell R to repeat a command *based on* some condition
-For example, say we have the following 100m dash times, some of which were measured at Course 1 and some of which were measured at Course 2. We'll start by combining all of this information into a dataframe
+For example, say we have the following 100m dash times, which were measured at three different courses (Course "A", "B", and "C")
 ```
 Times = c(12.4, 12.2, 12.7, 11.9, 13.4, 12.9, 13.1, 11.6, 12.1, 13.0)
-Course = c("Course1", "Course1", "Course2","Course1","Course2",
-           "Course1","Course2","Course1", "Course1","Course2")
-DashTimes = as.data.frame(cbind(Course,Times))
-View(DashTimes)
+Course = c("CourseA", "CourseA", "CourseB","CourseA","CourseC",
+           "CourseB","CourseC","CourseA", "CourseA","CourseB")
 ```
-We learn that there was a strong headwind at Course 2, making runners times slightly slower than they may have been otherwise. To correct for this, we want to **subtract 0.2 seconds** to all times that were **measured at Course 2**.
-Here is how we could do that using an if/else statement and for loop in r:
+We learn that there was a headwind at Course B, making runners times slower than they may have been otherwise, and a tailwind at Course C, making runners times faster than they would have been otehrwise. To correct for this, we want to **subtract 0.2 seconds** to all times that were **measured at Course B** and **add 0.1 seconds** to all times that were **measured at Course C**. We want to leave the times measured at Course A unaltered.
+Here is one way we could do this using an if/else statement and for loop in r:
 ```
-for (i in 1:10)   # We choose 10 here because there are 10 times listed in the "Times" vector
-  {if(Course[i] == "Course2")   # set up the "if" condition
-  {Times[i] = Times[i]-0.2}
+for (i in 1:10)  {                # We choose 10 here because there are 10 times listed in the "Times" vector
+           if(Course[i] == "CourseB")                  # set up the "if" condition
+                      {Times[i] = (Times[i]-0.2)}      # subtract 0.2 from these times
+           else if(Course[i] == "CourseC")             # set up the other "else if" condition     
+                      {Times[i] = (Times[i]+0.1)}      # add 0.1 to these times
+  }   
+View(times)                                            # check that the loop worked by viewing the times vector again
 ```
+Since we did not specify any additional if/else commands, we're essentially telling R not to do anything to the times associated with Course A. Notice that in this example, we chose to overwrite the original times vector. However we could have also created a new vector ("TimesCorrected", for example) and stored the corrected times there instead.
+
+
 
 
