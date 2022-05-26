@@ -54,6 +54,7 @@ The function is started for you below, but not finished.
 SpEvenness = function(x,y) {
 evenness = # FILL IN CODE HERE
 }
+```
 
 1.10) Use this function to calculate the species evenness on the same vectors from above and commpare your answers between the 2 approaches
 
