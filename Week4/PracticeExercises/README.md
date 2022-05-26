@@ -8,8 +8,12 @@ Reminder of the important notes before starting:
 
 ## Part 1: Small mammal diversity example ##
 
+Species richness, evenness, and diversity are common ways of measuring and describing how many species are present at a given site and are used often in ecology. We will work with data concerning small mammal species from different sites in California. 
+
 1.1)  You have the following values for the species richness (i.e., the number of of different species) of small mammals for a given site in CA:
+```
 Rich = c(5,8,7,13,11,10,11,7,10,7,8,5,6,9,9,8,11,8,9,5,6,8,6)
+```
 
 1.2) How many entries are in 'Rich'? (i.e. How long is the vector)
 
@@ -19,11 +23,11 @@ Rich = c(5,8,7,13,11,10,11,7,10,7,8,5,6,9,9,8,11,8,9,5,6,8,6)
 Exmaine the output to make sure you did this correctly
 
 1.5) You also have the following values for species diversity (a metric based on the number and relative abundance of species) at the same sites:
-
+```
 SpDiversity = c(0.14, 0.92, 0.78, 1.44, 0.824, 0.876, 0.52, 0.72, 1.09, 0.75,
               0.64, 0.78, 0.81, 0.60, 0.57, 0.34, 0.29, 0.694, 1.194, 0.561,
-              0.11, 0.65, 0.422)
-              
+             0.11, 0.65, 0.422)
+```             
 Bring in this variale 'SpDiversity' into R.
 
 1.6) Species "evenness" is a measure of the relative abundances of different species in a community (i.e., how 'evenly' distributed the abundances are). 
@@ -101,134 +105,78 @@ for (i in 1:23) {
 Size2[i] = # FILL IN CODE HERE}
 ```
 
+1.18) Lets do the same thing but using a function instead of a for loop. Create a function called "SizeConvert" that takes as input a value in hectares and provides as output, the size value in square meters (1 hectare = 10,000 square meters)
 
-# 1.7) Create a function called "SizeConvert"
-# That takes as input a value in hectares and provides as output, 
-# the size value in square meters (1 hectare = 10,000 square meters)
-# Use your newly created function on the Size vector 
-# and compare your answer to that obtained from the for loop approach 
+1.19) Use your newly created function on the Size vector and compare your answer to that obtained from the for loop approach 
 
-# 1.8) You are probably starting to see that the same task can often be achieved
-# by either using a for loop or a function. What is the commonality in these two approaches?
-# i.e. what is the basic common goal of both the for loop and function?
+1.20) You are probably starting to see that the same task can often be achieved by either using a for loop or a function. 
+What is the commonality in these two approaches? (i.e. what is the basic common goal of both the for loop and function?)
 
 
-# 2
-# Pull up the Anopheles data set from workshop 1 and refamiliarize yourself with this dataset
-# The team that collected mosquitoes at the "Thousand Oaks" site made an error in species identification
-# To correct for this, you need to divide all mosquito values from this site by 2
-# Use the code below to do this & overwrite the original dataset with the new values:
+## Part 2: Mosquito example ##
 
+Lets return to the Anopheles dataset from Week 1. Recall that this dataset contains information on the abundance of mosquitoes (specifically *Anopheles quadrimaculatus*, the common malaria mosquito) at different locations (in Florida) and sampling times.
+
+2.1) Import the Anopheles_Data.csv and store it in a data frame called "Mosqs"
+
+2.2) We learned later that the team that collected mosquitoes at the "Thousand Oaks" site made an error in species identification. To start, lets see how many observations were from the "Thousand Oaks" site.
+```
+length(which(Mosqs$sample_location_info == "Thousand Oaks"))
+```
+How many observations were affected? (i.e., what is the output from above?)
+
+2.3) To correct for the species ident, we need to divide all mosquito values from this site by 2. Fill in the code below to do this, overwriting the original dataset with the new values:
+
+```
 for (i in 1:2270)
-if(Mosqs[i, 3] == "Thousand Oaks")
+if(Mosqs[i, 3] == "FILL IN CODE HERE")
 {Mosqs[i,2] = Mosqs[i,2]/2}
+```
 
-# 2.1) Why did the for loop run from 1:2270?
-# 2.2) How come we did not create an empty vector to store values in?
+2.4) Why did we the for loop to run from 1:2270?
 
-# 2.3) 
-# Similar to the above example, lets say all the mosquitoes collected at the site "French"
-# were underestimated. We want to add 3 to the value column for all rows with
-# counts taken at the French data set.
-# Modify the code in question 2 to create a for loop that can do this
+2.5) How come we did not create an empty vector to store values in?
 
-# 2.4) CHALLENGE
-# At the mosquito control district, you will get lots of datasets that look similar to this one
-# You want to create a function that can quickly take in a dataset and
-# create a plot of mosquito abundance by month
-# Call the function "QuickPlots":
+2.6) Similar to the above example, lets say all the mosquitoes collected at the site "French" were underestimated. 
+We want to **add 3** to the value column for all rows with counts taken at the French data set. Modify the code from question 2.3 to create a for loop that can do this
 
+2.7) Lets say you work at the mosquito control district, where you look at lots of datasets like this Anopheles one. To make your work go faster, create a function that can quickly take in a dataset and create a plot of mosquito abundances by month. Call the function "QuickPlots":
+```
 QuickPlots = function(a1)
 {plot(a1[,6],a1[,2], main = "Mosquito Abundance by Time", col = "blue", pch = 16,
       xlab = "Month", ylab = "Mosquito Abundance")}
+```
+Why did we put 'a1' as the placerholder inside of the function rather than 'x' as we've done before?
 
-# 2.4.1)
-# What is the format of the input to the function QuickPlots? (i.e. is it a vector? data point?)
+2.8) What is the format of the input to the function QuickPlots? (i.e. is it a vector? data point?)
 
-# 2.4.2)
-# Try running the QuickHits function on the Mosq dataset. Did you get the expected output?
+2.9) Try running the QuickPlots function on the Mosq dataset. Did you get the expected output?
 
-# 2.4.3)
-# Using a similar approach as above, create a function that will take the same input
-# as the QuickPlots function (i.e. a dataframe formatted the same way as Mosqs)
-# and print out basic summary stats including the mean, standard deviation 
-# and range for mosquito abundance values. Name the function whatever you like
+2.10) Using a similar approach as above, create a function that will take the same input as the QuickPlots function (i.e. a dataframe formatted the same way as Mosqs) and print out some basic summary stats including the mean, standard deviation and range for mosquito abundance values (across all months, not separated by month). Name the function "QuickStats"
 
-# 2.4.4)
-# Run your function on the Mosqs dataset to make sure it works
+2.11) Run your function on the Mosqs dataset. What do you get for the mean, standard deviation, and range of mosquito abundances?
 
-# 3)
-# Import and View the "ExamScores" csv file uploaded on github
-# This dataset contains various quiz and exam scores for a class
-# Make sure when importing that you specify that there are column names in this dataset
+## Part 3: Asthma intervention study ##
 
-# 3.1)
-# For each student, you want to calculate the average score on the Exams only.
-# Create a for loop that can perform this calculation for you, for every student
-# Store the output in a new vector, named whatever you like
+The VO2max_AsthmaStudy dataset contains data on the VO2 max (a measure of the maximum amount of oxygen your body can utilize during exercise) measured at 4 separate visits for participants enrolled in an asthma drug trial. 
 
-# 3.2)
-# Create a function that identifies the lowest QUIZ score for a single student
-# The input to this function should be a vector of quiz and exam grades, 
-# and the output should be the lowest QUIZ grade 
-# Note this is slightly different from the "min" function because it ignores the exam grades
-# Call this function "LowQuiz"
+3.1) Import the dataset and name it "VO2max". Make sure to pecify that there *are* column names and row names (the first column, which contains the participant IDs) in this dataset.
 
-# 3.3)
-# Now use this function on the first row of the dataset to make sure that it works
+3.2) How many participants are included in this dataset? How many are in the control group? How many in the treatment group?
 
-# 3.4)
-# Now use this funciton within a for loop to calculate the lowest quiz score
-# for each student. Store the output in a vector called "LowestQuizScore"
+3.3) For each participant, you want to calculate their average VO2 max value. Start by creating an empty vector called "VO2avgs"
 
-# 3.5)
-# Create a new function that calculates a final numeric grade for each student
-# which combines all the quiz scores as 30% of the grade and the exam scores as 70% of the grade
-# The function should again take as an input, a vector of grades for a single student,
-# and output a single numeric grade
+3.4) Use the code below to write a for loop calculating the average VO2 max for each participant
+```
+for (i in 1:nrow(VO2max))
+     {VO2avgs[i] = mean(as.numeric(VO2max[i,2:5]))}
+```
+Why did we need to include the 'as.numeric' inside of the mean function here?
 
-# 3.6)
-# Run this function on the first student to calculate their final exam grade
+3.5) Add this "VO2avgs" vector as a column onto the VO2max dataset using cbind() (i.e., overwrite the original dataframe)
 
-# 3.7)
-# Again, use a for-loop to use this function on all students. Store the output 
-# in a vector called "StudentFinalGrades"
+3.6) Practicing some stats concept from last week, lets examine if there is a difference in average VO2 max values between the control and treatment participants. To start, create a boxplot (either in ggplot or base R) that shows the average VO2 max values for control participants in one box and for treatment participants in another. Feel free to spruce up your plot with a title, colors, etc.
 
-# 3.8)
-# Use the cbind function to add this new vector onto the end of the Exams dataframe
+3.7) To dig into this further, run a t.test to see if there is a statistical difference in average VO2 max values between the treatment and control groups. What do you find? Would you conclude that the treatment is effective?
 
-# 3.9)
-# Practicing some stats concepts from last time - how well does the student's exam1 grade
-# predict the student's final grade? (i.e. run a linear regression)
-# You can also create a scatterplot and add the regression line 
 
-# 4) While loop walk through
-# While loops work by running the loop until some condition is met
-# This is unlike for loops which run for a pre-specified range
-
-# Here we'll use a while loop to print out the first Fibonacci numbers: 0,1,1,2,3,5,8,13...
-# where each number in the sequence is the sum of the 2 previous numbers
-
-# The code below demonstrates how to do this using a while loop:
-a <- 0
-b <- 1
-while (b < 50) {
-  print(b)
-  temp <- a + b
-  a <- b
-  b <- temp
-}
-
-# 4.1 How would you update the code above to produce more numbers in the sequence?
-# 4.2 Why does the loop here end at the number 34? Why not 49?
-# 4.3 What are 'a' and 'b' placeholders for in this example?
-
-# 5.1) While loop practice (HARD)
-# You are playing a lottery style game where you randomly select numbers (with replacement)
-# from the pool of integers 1:100
-# The person to draw the number '100' first, i.e. in the fewest number of draws, wins
-# Simulate this game using a while loop
-# Then try playing it for yourself and see how many draws it takes you to get to 100
-# Hint: you'll want to create the pool of potential numbers first
-# i.e. the vector of integers ranging from 1:100
-# Then use the sample function, within a while loop, to draw from it
