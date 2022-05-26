@@ -27,3 +27,4 @@ The goal is simply to:
 1) find and analyze data that interests you
 2) produce some type of analysis of plot that you could describe to someone else
 
+Feel free to work as a group if you have shared interests or independently. Either way, feel free to ask each other questions, consult internet help documentation, and reach out to your instructor for guidance!
