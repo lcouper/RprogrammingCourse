@@ -83,6 +83,7 @@ for (i in 1:23) {
 1.13) Examine the output. How many low, medium, and high sites are there? 
 
 1.14) Lets say you also have the following values for the size (in hectares) of each site
+
 ```
 Size = c(19, 259, 97, 150, 118, 59, 28, 331, 210, 170, 441, 48, 256,21,
          378, 182, 140, 146, 74, 73, 59, 222, 239)
@@ -120,9 +121,11 @@ Lets return to the Anopheles dataset from Week 1. Recall that this dataset conta
 2.1) Import the Anopheles_Data.csv and store it in a data frame called "Mosqs"
 
 2.2) We learned later that the team that collected mosquitoes at the "Thousand Oaks" site made an error in species identification. To start, lets see how many observations were from the "Thousand Oaks" site.
+
 ```
 length(which(Mosqs$sample_location_info == "Thousand Oaks"))
 ```
+
 How many observations were affected? (i.e., what is the output from above?)
 
 2.3) To correct for the species ident, we need to divide all mosquito values from this site by 2. Fill in the code below to do this, overwriting the original dataset with the new values:
@@ -141,11 +144,13 @@ if(Mosqs[i, 3] == "FILL IN CODE HERE")
 We want to **add 3** to the value column for all rows with counts taken at the French data set. Modify the code from question 2.3 to create a for loop that can do this
 
 2.7) Lets say you work at the mosquito control district, where you look at lots of datasets like this Anopheles one. To make your work go faster, create a function that can quickly take in a dataset and create a plot of mosquito abundances by month. Call the function "QuickPlots":
+
 ```
 QuickPlots = function(a1)
 {plot(a1[,6],a1[,2], main = "Mosquito Abundance by Time", col = "blue", pch = 16,
       xlab = "Month", ylab = "Mosquito Abundance")}
 ```
+
 Why did we put 'a1' as the placerholder inside of the function rather than 'x' as we've done before?
 
 2.8) What is the format of the input to the function QuickPlots? (i.e. is it a vector? data point?)
@@ -167,6 +172,7 @@ The VO2max_AsthmaStudy dataset contains data on the VO2 max (a measure of the ma
 3.3) For each participant, you want to calculate their average VO2 max value. Start by creating an empty vector called "VO2avgs"
 
 3.4) Use the code below to write a for loop calculating the average VO2 max for each participant
+
 ```
 for (i in 1:nrow(VO2max))
      {VO2avgs[i] = mean(as.numeric(VO2max[i,2:5]))}
