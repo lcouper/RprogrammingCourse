@@ -7,6 +7,10 @@ By the end of the course, students will feel confident using R for basic data an
 ## Course Format ##
 In-person instruction (2 hours / per week) consisting of a short content introduction, followed by individual/group work on exercises in R using biological data sets. Exercises will be completed outside of class time and are expected to take an additional 2 hours/week. Exercises are intended to be challenging and to extend beyond what is introduced in class. To complete the exercise, students are encouraged to use any and all resources including consulting each other, online help pages (e.g., stackoverflow, r-bloggers, etc.) and the instrutor. There are no formal evaluations. No prior programming experience is required or expected. 
 
+## Zoom link (for first class only) ##
+
+https://stanford.zoom.us/j/6410787459?pwd=ZDhjcXorN0h1ZDJxTXA2TEZyNnNGZz09
+
 ## Course Schedule ##
 
 | Week | Topic | 
