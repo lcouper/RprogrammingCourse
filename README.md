@@ -5,7 +5,11 @@
 By the end of the course, students will feel confident using R for basic data analysis and visualization. Namely, students will be able to: manipulate data sets, find and install packages, conduct preliminary statistical analyses, and create basic visualizations.
 
 ## Course Format ##
-This is a 2-unit, independent study course. In-person instruction (2 hours / per week) will consist of a short content introduction, followed by individual/group work on exercises in R using biological data sets. Exercises will be completed outside of class time and are expected to take an additional 2 hours/week. Exercises are intended to be challenging and to extend beyond what is introduced in class. To complete the exercise, students are encouraged to use any and all resources including consulting each other, online help pages (e.g., stackoverflow, r-bloggers, etc.) and the instrutor. There are no formal evaluations. No prior programming experience is required or expected. 
+This is a 2-unit, independent study course. In-person instruction (2 hours / per week) will consist of a short content introduction, followed by individual/group work on exercises in R using biological data sets. Exercises will be completed outside of class time and are expected to take an additional 2 hours/week. Exercises are intended to be challenging and to extend beyond what is introduced in class. To complete the exercise, students are encouraged to use any and all resources including consulting each other, online help pages (e.g., stackoverflow, r-bloggers, etc.) and the instrutor. No prior programming experience is required or expected. 
+
+## Evaluations ## 
+
+There are no weekly homework assignments or exams. I encourage you to submit your practice exercises to me for feedback, but this is not required and these will not be 'graded'. There are no formal evaluations. The one assignment for the course is to complete a small (either group or independent) project on the final week in which you practice some of the R concepts you learned on a biological dataset of your choosing. 
 
 ## Course Meetings ##
 
