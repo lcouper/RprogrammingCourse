@@ -61,11 +61,18 @@ mean(SouthF$value) # Result = 17.62
 t.test(NorthF$value, SouthF$value) 
 # Diff significant at alpha = 0.05
 
-# 2.9) 
+# 2.9)
+aggregate(Anopheles$value ~ Anopheles$sample_location_info, FUN = mean)
+
+# 2.10)
 MonthlyMos = aggregate(Anopheles$value ~ Anopheles$sample_month, FUN = mean)
+
+# 2.11)
+MonthlyMos
 # Looks like Jan and March had highest values
-# January and February only have one data point 
-# January looks like it may have been a typo
+# January and February may only have one data point 
+# Can tell because they are the only two with a nice, whole number of mosquitoes)
+# Issue may be that January was a typo?
 
 #### 3. Importing and exploring data: Disease example ####
 
@@ -102,6 +109,8 @@ summary(active$y)
 # There are many ways to do this. Here's one way to do it in a single line:
 length(which(placebo$y =="y"))/ nrow(placebo)
 # 84/96 (87.5%) positive for H. influenzae after placebo treatment
+# note the 'nrow' function counts the number of rows in the dataset
+# so it's a way to get the denominator for the percentage calculation
 
 # 3.8) 
 length(which(active$y =="y"))/ nrow(active)
@@ -114,7 +123,8 @@ Animals = read.csv("~/Downloads/CA_Animals.csv", header = TRUE, row.names = 1)
 View(Animals)
 
 # 4.2)
-Totals = colSums(Animals) # Lizards are most abundant
+Totals = colSums(Animals) 
+Totals # Lizards are most abundant
 
 # 4.3)
 SiteE = Animals[5,]
