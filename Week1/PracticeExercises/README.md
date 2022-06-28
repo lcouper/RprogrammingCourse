@@ -13,7 +13,7 @@ Important notes before starting:
 1.1) You want to simulate the outcome of 50 random coin tosses. How could you do this in R?
 
 
-1.2) You want to simulate the lengths (in centimeters) of Arabidopsis stems. 
+1.2) You want to simulate the lengths (in centimeters) of Arabidopsis (a type of plant) stems. 
 You want 20 values ranging from 3.4 to 11.6 (i.e. non-integer values must be possible). 
 How could you do this?
 Hint: The "sample" function only works for integers so you will need to find a different function.
