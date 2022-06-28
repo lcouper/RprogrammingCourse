@@ -50,9 +50,9 @@ Store this data in a new variable called "Simulated" and replace row 1 of the "E
 ### Useful functions: read.csv(), mean(), max(), which() ###
 
 2.1 Download and import the "Anopheles_Data.csv" data set. Save it as a variable in R called "Anopheles"
-Note: There are column names in this dataset (so set header = TRUE)
-This dataset contains information about the number of *Anopheles quadrimaculatus* (the malaria vector in eastern US) at various sites in Florida
-The "value" column indicates how many mosuqitoes were found in the trap at that day/location.
+Note: There are column names in this dataset (so set header = TRUE).
+This dataset contains information about the number of *Anopheles quadrimaculatus* (the malaria vector in eastern US) at various sites in Florida.
+The "value" column indicates how many mosquitoes were found in the trap at that day/location.
 
 2.1) What is the average number of mosquitoes found at all traps/locations?
 
