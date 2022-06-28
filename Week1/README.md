@@ -12,14 +12,15 @@ This week's **learning objectives** are to:
   -  How to import data
   -  How to access subsets of data
 
+## Section 1: What is R / R Studio? ##
 
-## Section 1: R Studio Layout ##
+## Section 2: R Studio Layout ##
 
 ![R studio layout](./Rstudio_Layout.jpg)
 
 
   
-## Section 2: Functions in R ##
+## Section 3: Functions in R ##
 
 'Functions' are how you communicate to R what you are trying to make it do. R has many many built-in functions already! 
 Examples include: mean(), subset(), plot()
@@ -31,7 +32,7 @@ You can use functions by typing the name of the function and adding arguments wi
    sample(1:10, 3)
    ```
  
-## Section 3: Installing packages ##
+## Section 4: Installing packages ##
 
 There are also lots of additional functions not including in 'base' R, but that are part of packages made by other users. To access these, you need to first install the package. This can be done 1 of 2 ways:
 
@@ -54,7 +55,7 @@ Again you can do this 1 of 2 ways:
   In the packages tab, make sure the checkbox is clicked beside the package you want to use
       
   
-## Section 4:  Importing data ##
+## Section 5:  Importing data ##
 
 Now you want to use all the snazzy new functions you have available to you on some actual data. You can get your data into R either by manually entering it (only do those for very small datasets) or by importing the data files
     
@@ -102,7 +103,7 @@ Examples:
           str(data)   # Provides info about the class of your dataset (more on that later), the dimensions, and each of the columns
 ```
              
-## Section 5:  How to access your data ##
+## Section 6:  How to access your data ##
 
 You've now imported data and you want to start using functions/performing calculations on it. There are tons of functions for manipulating data in R (We'll cover these more next week). Today we will mainly be using the square brackets to access data:
   
