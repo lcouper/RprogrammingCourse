@@ -14,7 +14,7 @@ Welcome to R! This week's **learning objectives** are to:
 
 - R is a program & programming language 
 - One of the most popular programming languages in data science & research
- - over 2 million users worldwide
+-- over 2 million users worldwide
 - Free, open-source 
 - Used heavily in genetics, bioinformatics, epidemiology, ecology, etc.
 - R Studio is **the** coding environment (also free!)
