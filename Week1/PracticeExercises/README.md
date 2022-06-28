@@ -20,7 +20,7 @@ Hint: The "sample" function only works for integers so you will need to find a d
 
 
 1.3) You have a dataset that you want to compare to normally distributed data with mean = 0 and standard deviation = 1. 
-How would you sample 100 values from a normal distribution of mean 0 and sd 1?
+How would you sample 100 values from a normal distribution of mean 0 and standard deviation (sd) 1?
 Hint: Use the rnorm function. Use ?rnorm for help on how to use it!
 
 
