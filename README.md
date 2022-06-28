@@ -29,3 +29,7 @@ https://stanford.zoom.us/j/6410787459?pwd=ZDhjcXorN0h1ZDJxTXA2TEZyNnNGZz09
 | 3 (7/13) | Basic statistical analysis and plotting -- summary statistics, t.tests, chi-squared, ggplot | 
 | 4 (7/20) | An intro to 'advanced' topics in R -- for loops, if/else statements, writing functions |
 | 5 (7/27) | Group project on a biological dataset of your choosing |
+
+## Course Philosophy ##
+
+Growth mindset. Everyone has the ability to learn and improve their abilities through effort, support, and experience. The practice exercises are designed to be challenging and incorporate concepts and information not necessarily covered in the lecture notes. You are encouraged to use any means you can think of to complete these exercises -- the internet, each other, me, etc. 
