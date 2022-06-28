@@ -7,6 +7,8 @@ Important notes before starting:
 
 - For nearly all of these problems, there are many different ways you could solve them. In the answer key, I provide one (or sometimes two) potential ways, but these aren't necesssarily the only "right" answer
 
+- You'll want to download the course materials from github before starting. This will let you access the datasets and practice exercise keys more easily.  To do this, navigate to the main course page. Hit the green "Code" button on the top right. Click "Download Zip". Save the materials wherever you like on your computer.
+
 ## 1. Simulating data ##
 ### Useful functions: sample(), rnorm() 
 
