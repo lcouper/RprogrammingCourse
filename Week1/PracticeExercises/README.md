@@ -9,6 +9,8 @@ Important notes before starting:
 
 - You'll want to download the course materials from github before starting. This will let you access the datasets and practice exercise keys more easily.  To do this, navigate to the main course page. Hit the green "Code" button on the top right. Click "Download Zip". Save the materials wherever you like on your computer.
 
+![Downloading Files](./DownloadingGithubFiles.png)
+
 ## 1. Simulating data ##
 ### Useful functions: sample(), rnorm() 
 
