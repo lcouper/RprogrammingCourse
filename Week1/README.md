@@ -28,7 +28,7 @@ Welcome to R! This week's **learning objectives** are to:
 ## Section 3: Functions in R ##
 
 'Functions' are how you communicate to R what you are trying to make it do. R has many many built-in functions already! 
-Examples include: mean(), subset(), plot()
+Examples include: mean(), subset(), plot()   
 You can use functions by typing the name of the function and adding arguments within the parantheses
    
    For example:
