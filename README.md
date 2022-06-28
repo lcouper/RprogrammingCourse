@@ -15,8 +15,8 @@ https://stanford.zoom.us/j/6410787459?pwd=ZDhjcXorN0h1ZDJxTXA2TEZyNnNGZz09
 
 | Week | Topic | 
 | :---- | :---- | 
-| 1 | Introduction to R and its use in biological research, Navigating R Studio , Importing data sets & basic summary stats | 
-| 2 | Data manipulation | 
-| 3 | Basic statistical analysis and plotting -- summary statistics, t.tests, chi-squared, ggplot | 
-| 4 | An intro to 'advanced' topics in R -- for loops, if/else statements, writing functions |
-| 5 | Group project on a biological dataset of your choosing |
+| 1 (6/29) | Introduction to R and its use in biological research, Navigating R Studio , Importing data sets & basic summary stats | 
+| 2 (7/6) | Data manipulation | 
+| 3 (7/13) | Basic statistical analysis and plotting -- summary statistics, t.tests, chi-squared, ggplot | 
+| 4 (7/20) | An intro to 'advanced' topics in R -- for loops, if/else statements, writing functions |
+| 5 (7/27) | Group project on a biological dataset of your choosing |
