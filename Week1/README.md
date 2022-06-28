@@ -117,7 +117,7 @@ Examples:
          Eagles[4,2]    # Tells R to look in the "Eagles" dataframe and pull out the 4th row and 2nd column  
          Eagles[4,]     # Tells R to look in the Eagles dataframe and pull out the ENTIRE 4th row
          Eagles[,2]     # Tells R to pull out entire 2nd column
-         Eagles[5, 2:4] # Pull out the 5th row, but just columns 2-4
+         Eagles[5, 3:5] # Pull out the 5th row, but just columns 3-5
 ```        
     
   You can assign these data subsets to new variables or perform calculations directly on these subsets.
