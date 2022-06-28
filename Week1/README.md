@@ -1,8 +1,6 @@
 # Week 1: Introduction to R #
 
-Welcome to R! You are now joining >2 million users worldwide enjoying the wonders of R. 
-
-This week's **learning objectives** are to:
+Welcome to R! This week's **learning objectives** are to:
 - understand the benefits of learning R and its application to research
 - succesfully download R and R studio
 - become familiar with:
@@ -13,6 +11,13 @@ This week's **learning objectives** are to:
   -  How to access subsets of data
 
 ## Section 1: What is R / R Studio? ##
+
+- R is a program & programming language 
+- One of the most popular programming languages in data science & research
+- >2 million users worldwide
+- Free, open-source 
+- Used heavily in genetics, bioinformatics, epidemiology, ecology, etc.
+- R Studio is **the** coding environment (also free!)
 
 ## Section 2: R Studio Layout ##
 
