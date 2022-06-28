@@ -77,7 +77,7 @@ The above was an example of numerical data but you can also create categorial or
 This requires putting quotation marks around the data points so R doesn't think it's just another variable
 Ex: 
 ```
-names = c("A", "A", "B", "B", "C", "C")
+grades = c("A", "A", "B", "B", "C", "C")
 ```
         
 ### Importing data ###
