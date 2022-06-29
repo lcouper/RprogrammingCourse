@@ -1,7 +1,7 @@
 # Week 1 Practice Exercises #
 
 Important notes before starting: 
-- Feel free to write out the code/answers for the questions below if that's helpful to you, or feel free to just use these exercises to guide your exploration (no one is grading you!)
+- It will probably be easiest if you open a new script in R Studio to store your answer. To do this: In R Studio, go to File > New File > R Script. Feel free to write out the code/answers for the questions below if that's helpful to you, or feel free to just use these exercises to guide your exploration (no one is grading you!). 
 
 - You are encouraged to use any and all tools available to you, especially the internet! You are not expected to "know" how to do these problems yet or to memorize any of these functions or steps. Virtually everyone who uses R is constantly using the internet/ R help tools for reference and guidance
 
