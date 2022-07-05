@@ -121,7 +121,7 @@ Here are some basic ways you can reshape your data in R:
   iris2 = t(iris)
   ```
 
-- Convert between wide and long form
+- Convert between wide and long form   
   Example:
   ``` 
   library(reshape2) # load the reshape2 package, needed to use the melt function below
