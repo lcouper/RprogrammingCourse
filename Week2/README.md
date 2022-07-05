@@ -17,10 +17,11 @@ You can also subset your data *based on values in other columns*.
 Here, instead of indexing based on rows & columns, you can pass a logic statement (using ==, >, <=, etc)
   
 For example:   
-*(Note the examples below use the 'iris' dataset, which is a dataset included in R. If it's not already loaded for you, run *'library(datasets)')
+*(Note the examples below use the built-in dataset 'iris'. If it's not already loaded for you, run *'library(datasets)')
 ```
 iris[iris$Species == "virginica",] # Pulls out all rows that have "virginica" as the species
 
+# Can do the same with numeric data
 iris[iris$Petal.Length >= 6.0,] # Pull out all species with petal.length greater than or equal to 6.0
 ```
 
@@ -28,13 +29,21 @@ iris[iris$Petal.Length >= 6.0,] # Pull out all species with petal.length greater
 
 This can be important if you are adding more data to your dataset, or later identifying data points you need to remove, etc.
 
-To remove rows and columns, we can use a similar strategy as in subsetting, but make use of the '-' operator
-Examples
+To remove rows and columns, we can use a similar strategy as in subsetting, but make use of the '-' operator  
+For example:
 ```
   iris[-10, ] # Removes the 10th row of the dataset
- ```
-  iris[ , -c(1,2)] # Removes the first two columns:
-  
+
+  iris[ , -c(1,2)] # Removes the first two columns  
+```
+
+Similar to the above, we can also remove rows based on their values rather than the row & column numbers.   
+We can do this using the "!=" operator, which means "not equal to"
+For example:
+```
+  iris[iris$Species != "setosa",]  # removes all the rows with "setosa" in the Species column
+```
+
 To add rows and columns, we can use the rbind (row bind) and cbind (column bind) function 
   
  Examples
