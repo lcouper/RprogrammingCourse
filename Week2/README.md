@@ -7,7 +7,7 @@ Become familiar with various ways of re-shaping and manipulating data in R inclu
 - adding & removing columns and rows
 - changing row and column names
 - converting between different data 'classes'
-- transposing data (flipping long and wide)
+- converting between long and wide data forms
 
 ## Section 1: Subsetting data ## 
 
