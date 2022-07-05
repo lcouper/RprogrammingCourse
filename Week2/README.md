@@ -11,44 +11,15 @@ Become familiar with various ways of re-shaping and manipulating data in R inclu
 
 ## Section 1: Subsetting data ## 
 
-If you know the specific rows and columns you want to pull out, you can use either the square brackets [ , ] , or the $ (for columns only)
-In the square brackets, list the rows first & columns second
-
-Example
-```
-iris[ ,3] # To extract the third column of the iris data set
-```
-By leaving the "row" argument blank above, we're telling R, we want all the rows in the third column
-
-Example:
-```
-iris[1:10, 1:4] # Pull out the petal and sepal measurements for the first 10 rows: 
-```
-
-For columns only, if you know the name of the column, you can use '$' with the column name
-
-Example
-```
-iris$Species # Pulls out the Species column from the iris data set
-```
-
-Once you've isolated some subset of your data, you can then use functions on these subsets either by saving them as a new variable first, or directly.
-
-Examples
-```
-  mean(iris[,3]) # calculate the mean of the third column of the data set
-  # Same idea, but done with the intermediate step of defining a variable 'PetalLength'
-  PetalLength = iris[,3] 
-  mean(PetalLength)
-```
+Last week we discussed subsetting rows when you know the specific rows and columns you want to pull out (i.e., using either the square brackets [ , ] , or the $ for columns)
 
 You can also subset your data *based on values in other columns*. 
-Similar to the above, you still tell R which data frame you're working in. 
-But then instead of passing rows/columns, you can pass a logic statement (using ==, >, <=, etc)
+Here, instead of indexing based on rows & columns, you can pass a logic statement (using ==, >, <=, etc)
   
-Examples:
+For example:   
+*(Note the examples below use the 'iris' dataset, which is a dataset included in R. If it's not already loaded for you, run *'library(datasets)')
 ```
-iris[iris$Species == "virginica",] # Pull out all the "virginica" species
+iris[iris$Species == "virginica",] # Pulls out all rows that have "virginica" as the species
 
 iris[iris$Petal.Length >= 6.0,] # Pull out all species with petal.length greater than or equal to 6.0
 ```
