@@ -9,10 +9,10 @@ Reminder of the important notes before starting:
 
 ### 1. Reshaping data: Microbiome example ###
 
-1.1) Download and import the "Microbiomedata" csv. Store this data in a new data frame (variable) called "md"
+1.1) Download and import the "Microbiomedata" csv (part of the course materials you downloaded last week). Store this data in a new data frame (variable) called "md"
 Make sure when you import the dataset that you indicate that there are both column names AND row names.
 In this dataset, the row names are names of bacteria found in the microbiome of a tick and the column names are sample identifiers. 
-The values represent the number of sequences attributed to each microbe for that sample (like a relative abundance)
+The values represent the number of sequences attributed to each microbe for that sample (you can think of this like a relative abundance for each bacterial species)
 
 1.2) The sample 'PW005' was later found to have issues - remove this column and overwrite the original dataset with this change
 
