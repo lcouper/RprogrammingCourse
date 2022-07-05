@@ -11,7 +11,7 @@ Become familiar with various ways of re-shaping and manipulating data in R inclu
 
 ## Section 1: Subsetting data ## 
 
-Last week we discussed subsetting rows when you know the specific rows and columns you want to pull out (i.e., using either the square brackets [ , ] , or the $ for columns)
+Last week we discussed subsetting data when you know the specific rows and columns you want to pull out (i.e., using either the square brackets [ , ] , or the $ for columns)
 
 You can also subset your data *based on values in other columns*. 
 Here, instead of indexing based on rows & columns, you can pass a logic statement (using ==, >, <=, etc)
