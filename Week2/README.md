@@ -25,7 +25,7 @@ iris[iris$Species == "virginica",] # Pulls out all rows that have "virginica" as
 iris[iris$Petal.Length >= 6.0,] # Pull out all species with petal.length greater than or equal to 6.0
 ```
 
-## Section 2: Adding and removing rows and columns ###
+## Section 2: Removing and adding rows and columns ###
 
 This can be important if you are adding more data to your dataset, or later identifying data points you need to remove, etc.
 
@@ -43,45 +43,51 @@ For example:
 ```
   iris[iris$Species != "setosa",]  # removes all the rows with "setosa" in the Species column
 ```
+Note the above code did not actually *overwrite* the original iris dataframe. If we want to do this, we would instead write:  
+```
+  iris = iris[iris$Species != "setosa",] 
+```
 
 To add rows and columns, we can use the rbind (row bind) and cbind (column bind) function 
   
- Examples
+For example:
  ```
  # Add another observation, "Flower 151" to the iris dataset:
  Flower151 = c(7.2, 3.0, 6.4, 2.5, "virginica")  
- rbind(iris, Flower151) 
+ iris = rbind(iris, Flower151) 
  
  # Add a column with a randomly generated ID to the iris dataset:
  randomID = sample(1:150, 150, replace = FALSE)
- cbind(iris, randomID)
+ iris = cbind(iris, randomID)
  ```
  
  ## Section 3: Changing row and column names ##
 
 We can view and change the row and column names using: rownames(data), and colnames(data)
 
-Example:
+For example:
 ```
 rownames(iris) # View the row names for the iris data set
-colnames(iris) = c("Sepal.Length", "Sepal.Width", "Petal.Width", "Petal.Length", "Species") # change the colnames of iris dataset (switch petal width/length)
+colnames(iris) = c("Sepal.Length.cm", "Sepal.Width.cm", "Petal.Length.cm", "Petal.Width.cm", "Species") 
 ```
  
 ## Section 4: Data classes ##
 
-R recognizes different data 'types' data 'structures'. 
-Here is quick overview:
-  
-Data types:
+R recognizes different data 'classes' including:
+
+*for 1-dimensional data*
 - character = for text data
 - numeric = for real numbers
 - integer = for integers
 - logical = for True/False statements
 - factor = for integers/text with some sort of hierarchy
   
-Data structures:
+*for 2-dimensional data*
 - data frames = can store different types of data classes
 - matrices = can only hold one type of data class
+
+*for >1-dimensional data*
+- arrays & lists
   
 Converting between different classes may be important, as R can sometimes mistake your intention for the data and there are some functions that require data of a certain class
 
@@ -93,7 +99,7 @@ class(mtcars$gear)
 
 Convert between different classes using functions like: as.numeric(), as.character(), as.factor()
 
-Example
+For example:
 ```
 Grades = c("A", "B", "A", "A", "C", "A", "B")
 Grades = as.factor(Grades)
@@ -110,7 +116,7 @@ Getting your data into the format you need analysis (aka data reshaping) is very
 Here are some basic ways you can reshape your data in R:
   
 - Transpose your data (i.e. flip the rows and columns) using the 't' function
-  Example
+  For example
   ```
   iris2 = t(iris)
   ```
@@ -118,15 +124,22 @@ Here are some basic ways you can reshape your data in R:
 - Convert between wide and long form
   Example:
   ``` 
-  View(mtcars) # mtcars is a dataset included in R (but if it doesn't open for you, trying first running 'library(datasets)'
   library(reshape2) # load the reshape2 package, needed to use the melt function below
-  CarsMelt = melt(mtcars) # 'melt' the mtcars dataset (i.e., convert it from a wide format to a long format)
+  # Example using the 'airquality' dataset - another built-in dataset in R that has info on air quality measurements from NY in 173
+  View(airquality)
   
+  # If you "melt" mtcars without specifying anything further:
+  melt1 = melt(airquality)
   
-  CarMelt2 = melt(mtcars, id.vars = c("gear", "cyl")) # melt the dataset, but this time, preserve the gears and cylinder columns (basically you're telling R to classify your data based on the number of gears and cyls)
+  # Now "melt" the dataset but preserve the "gear" & "cyl" column
+  melt2 = melt(airquality, id.vars = c("Month", "Day"))  # id.vars = which columns you want to keep
+
+  # Go from long to wide ("casting") using the dcast() function:
+  cast1 = dcast(melt2, Month + Day ~ variable) 
+  # The variables to the left of the '~' are the ones you want to keep
+  # The variable(s) to the right of the '~' are the ones to cast so that each unique value has its own column
+
   
-  chick_m <- melt(ChickWeight, id=2:4, na.rm=TRUE) # melt the chick weight dataset
-  dcast(chick_m, diet ~ variable, mean) # 'cast' the dataset back to a wide format to easily see the average effect of diet on chick weight
   ```
   
   
