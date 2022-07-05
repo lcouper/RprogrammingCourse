@@ -53,7 +53,7 @@ hist(Melted$value)
 
 ### 2. Data reshaping: esophageal cancer example ###
 
-2.1) Load the 'esoph' data in R using the code below. The 'esoph' data in R contains records on 88 age/alcohol/tobacco combinations from a case-control study in France. Check out tht following page for information on what's contained in this datase: https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/esoph.html
+2.1) Load the 'esoph' data in R using the code below. The 'esoph' data in R contains records on 88 age/alcohol/tobacco combinations from a case-control study in France. Check out the following page for information on what's contained in this datase: https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/esoph.html
 
 ```
 library(datasets)
