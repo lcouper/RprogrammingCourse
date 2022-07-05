@@ -15,12 +15,12 @@ rowSums(md)
 mdt = t(md)
 
 # 1.5)
-class(mdt) # It got converted to a matrix during the tranpose step.
+class(mdt) # The data got converted to a "matrix" data class during the tranpose step.
 mdt = as.data.frame(mdt)
 class(mdt) # Check that it worked
 
 # 1.6)
-mean(mdt$Rickettsia)
+mean(mdt$Rickettsia) # 8087.953
 
 # 1.7)
 library(plyr)
@@ -63,12 +63,13 @@ colnames(esoph) = c("age_group", "alcohol_consump", "tobacco_consump", "num_case
 
 
 # 2.3) 
-class(esoph$tobacco_consump) # this column is an ordered factor, meaning there are 
-# is an order associated to the different values -- 
+class(esoph$tobacco_consump) # this column is an ordered factor, meaning there 
+# is an order associated with the different values -- 
 # i.e., 0-9g/ day is a level below 10-19, which is below 20-29 and so forth
+levels(esoph$tobacco_consump)
 
 # 2.4) 
-youngest = esoph[esoph$age_group == "25-34",,]
+youngest = esoph[esoph$age_group == "25-34",]
 
 # 2.5)
 summary(youngest$alcgp) # the 80-119 category has the fewest records
@@ -84,16 +85,16 @@ dcast(esoph, age_group ~ alcohol_consump, sum)
 dcast(esoph, age_group ~ tobacco_consump, sum)
 
 # 2.9) 
-install.packages("dplyr") # install dplyr package
+#install.packages("dplyr") # install dplyr package
 library(dplyr) # load package
-esoph$age_group = recode(esoph$age_group, '25-34' = "23-34")
+esoph$age_group = recode_factor(esoph$age_group, '25-34' = "23-34")
 View(esoph)
 
 # 2.10)
-esoph$tobacco_consump = recode(esoph$tobacco_consump, '0-9g/day' = "1-9g/day")
+esoph$tobacco_consump = recode_factor(esoph$tobacco_consump, '0-9g/day' = "1-9g/day")
 
 # 2.11) 
-esoph[17, 4:5] = c(14,17)
+esoph[17, 4:5] = c(4,17)
 
 
 
