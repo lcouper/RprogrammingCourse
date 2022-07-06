@@ -94,7 +94,7 @@ Converting between different classes may be important, as R can sometimes mistak
 Check data class by using "class" function:
 Example
 ```
-class(mtcars$gear)
+class(iris$Species)
 ```
 
 Convert between different classes using functions like: as.numeric(), as.character(), as.factor()
@@ -125,13 +125,13 @@ Here are some basic ways you can reshape your data in R:
   Example:
   ``` 
   library(reshape2) # load the reshape2 package, needed to use the melt function below
-  # Example using the 'airquality' dataset - another built-in dataset in R that has info on air quality measurements from NY in 173
+  # Example using the 'airquality' dataset - another built-in dataset in R that has info on air quality measurements from NY in 1973
   View(airquality)
   
-  # If you "melt" mtcars without specifying anything further:
+  # If you "melt" airquality without specifying anything further:
   melt1 = melt(airquality)
   
-  # Now "melt" the dataset but preserve the "gear" & "cyl" column
+  # Now "melt" the dataset but preserve the "Month" & "Day" column
   melt2 = melt(airquality, id.vars = c("Month", "Day"))  # id.vars = which columns you want to keep
 
   # Go from long to wide ("casting") using the dcast() function:
