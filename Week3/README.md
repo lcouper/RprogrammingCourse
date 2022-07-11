@@ -24,6 +24,11 @@ Here, the first argument gives the 'formula', where the left side is the variabl
 aggregate(weight ~ Diet, ChickWeight, mean)
 ```
 
+As another example, lets say we want to calculate the minimum weight of the chicks on each day. We could use the aggregate function like so:
+```
+aggregate(weight ~ Day, ChickWeight, min)
+```
+
 ## Section 1: Statistics ##
 
 There are many, many tools for statistical analysis either within base R or contained in other packages. Some examples include: 
@@ -37,17 +42,11 @@ Below are a few examples of some common statistical procedures.
 A statistical test used to analyze the differences in means among groups (e.g., between control and treatment groups, or a group pre- and post-some type of intervention).
 [Note that using an ANOVA assumes that your data are independent, normally distributed, and that groups have approximatley equal variances. We'll ignore this for now and assume it's true]
 
-Lets use the ChickWeight dataset from R
+Lets return to the chick weight example. We saw that the mean chick weight varied somewhat based on diet. But is this difference statistically significant? We can test this by running an ANOVA in R:
 ```
-library(datasets)
-View(ChickWeight)
-```
-This dataset provides info on the weights of chicks on different diets (1-4). You want to see if there's a mean difference in chick weight based on diet. This can be tested statistically using an ANOVA function executed through the "aov" function in base R
-
-```
-fit = aov(ChickWeight$weight ~ ChickWeight$Diet)
-# OR
-fit = aov(weight ~ Diet, data = ChickWeight) # This will achieve the exact same result as the above, its just another way to code it
+fit = aov(weight ~ Diet, data = ChickWeight)
+# OR 
+fit = aov(ChickWeight$weight ~ ChickWeight$Diet) # This will achieve the exact same result as the above, its just another way to code it
 ```
 Here, aov is the name of the function that fits an analysis of variance model. The first argument is the dependent or outcome variable. The second argument, after the ~, is the independent variable. To see the results of this model fit:
 ```
