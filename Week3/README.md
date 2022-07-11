@@ -7,6 +7,23 @@ This week's **learning objectives** are to:
 - feel comfortable looking at help documentation to figure out how to use more advanced functions
 - create basic data visualizations
 
+## Section 0: Aggregate function ##
+
+The 'aggregate' function is a very useful, powerful function in R that splits data into subsets & computes some summary statistic on these data subsets. For example, lets look at the 'ChickWeight' dataset in R (included in base R):  
+
+```
+library(datasets)
+View(ChickWeight)
+```
+This dataset provides info on the weights of chicks on different diets (1-4). Lets say we want to see if there's a mean difference in chick weight based on diet. We can use the aggregate function to do this like so:
+```
+aggregate(formula = weight ~ Diet, data = ChickWeight, FUN = mean)
+```
+Here, the first argument gives the 'formula', where the left side is the variable you are interested in calculating some statistic on (here, weight) and the right side is the grouping variable (here, Diet). The next argument is the dataset you are using and the third argument is the operation you want to perform on the data subsets (here, we want to take the mean). Note the code below would have done the same thing, but without having to call out the arguments to the aggregate function explicitly. 
+```
+aggregate(weight ~ Diet, ChickWeight, mean)
+```
+
 ## Section 1: Statistics ##
 
 There are many, many tools for statistical analysis either within base R or contained in other packages. Some examples include: 
