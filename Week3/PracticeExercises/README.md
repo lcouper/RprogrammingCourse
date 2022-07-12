@@ -81,6 +81,8 @@ North = Ticks[Ticks$SiteLocation == "North",]
 1.19) Instead of breaking apart the data to run the t-test as we've done above, we could have also used the code below to achieve the same result:
 ```
 t.test(Ticks$TickCount ~ Ticks$SiteLocation)
+# OR:
+t.test(TickCount ~ SiteLocation, data = Ticks)
 ```
 Can you adapt the code above to run a t.test on tick counts based on the rat counts? [Hint: you will get an error] Why didn't this work?
 
