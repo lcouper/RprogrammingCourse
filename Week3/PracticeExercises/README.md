@@ -9,7 +9,7 @@ Reminder of the important notes before starting:
 
 ### 1. Analysis and plotting: Tick example ###
 
-We'll be working with a dataset on tick count at different sites around the Bay Area. The dataset contains information on 16 sites, with the following information for each:
+We'll be working with a dataset on tick counts at different sites around the Bay Area. The dataset contains information on 16 sites, with the following information for each:
 - the number of ticks collected via a standard "drag collection" technique
 - the abundance of deer, lizards, rats and mice
 - the diversity of host species
