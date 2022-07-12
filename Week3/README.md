@@ -216,7 +216,7 @@ install.packages("ggplot2")
 library(ggplot2)
 
 ggplot(mtcars, aes(x=wt, y=mpg)) +     # aes here refers to 'aesthetics'
-  geom_point(size=4, shape= 1, col = "red") +  # add points to the plot, specificying the size, shape, and color  
+  geom_point(size=4, shape= 1, col = "red") +  # add points to the plot, specifiying the size, shape, and color  
 geom_text(label=rownames(mtcars), size = 2) +          # add labels next to the plotted points
   geom_smooth(method=lm, se = FALSE, linetype = "dashed", col = "black") +   # add a line of best fit to the plot
   labs(x = "weight", y = "gas mileage")  +   # adds x and y axis labels
