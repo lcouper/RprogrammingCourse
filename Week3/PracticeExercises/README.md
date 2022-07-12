@@ -106,7 +106,7 @@ What data class is SizeCat?
 
 1.26) Use the following code to calculate the mean tick abudance based on site size:
 ```
-tapply(X = Ticks2$TickCount, INDEX = Ticks2$SizeCat, FUN = mean)
+aggregate(TickCount ~ SizeCat, data = Ticks2, mean)
 ```
 We see that the mean tick abundances are: 71 for large sites, 65 for medium sites, and 41.75 for small sites. Create a vector containing these values (name the vector whatever you like).
 
