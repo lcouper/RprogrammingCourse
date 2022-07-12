@@ -38,7 +38,7 @@ There is no need to 'memorize' all of these different tools and functions (nobod
 
 Below are a few examples of some common statistical procedures.
 
-### Analaysis of Variance (ANOVA) example ###
+### Analysis of Variance (ANOVA) example ###
 A statistical test used to analyze the differences in means among groups (e.g., between control and treatment groups, or a group pre- and post-some type of intervention).
 [Note that using an ANOVA assumes that your data are independent, normally distributed, and that groups have approximatley equal variances. We'll ignore this for now and assume it's true]
 
