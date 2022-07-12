@@ -168,6 +168,8 @@ boxplot(weight ~ Diet, data = ChickWeight,
 
 Much better! Although the colors could always be prettier. Here's a nice guide to the various color options available in R: https://www.nceas.ucsb.edu/sites/default/files/2020-04/colorPaletteCheatsheet.pdf
 
+There are additional arguments we could have included as well (e.g., rotating the axes text, changing the size of spacing of the axis tick marks, etc.).
+Here is a nice guide on the different plotting arguments you can specify: https://r-coder.com/plot-r/
 
 ### Scatterplot Example ####
 
