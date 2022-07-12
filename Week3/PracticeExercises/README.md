@@ -132,9 +132,9 @@ Counts1998 = c(21, 9, 13, 14, 27, 18, 6, 15, 10, 11, 4, 29, 18, 7, 18, 19)
 ```
 What class is the Counts1998 variable? How is this class different from the 'integer' class?
 
-1.31 Lets see if there is a difference in ticks counts at our sites from 1998 to today. To do this statistically, we can use a 'chi-squared test'. Follow the code below to conduct a chi-squared test examining the difference between Counts1998 and our current data:
+1.31 Lets see if there is a difference in ticks counts at our sites from 1998 to today. Run a t test with Counts1998 as one group and the tick counts from the current year (i.e., Ticks$TickCount) as the other
 ```
-chisq.test(Counts1998, Ticks$TickCount)
+t.test(Counts1998, Ticks$TickCount)
 ```
 What does the test output indicate?
 
