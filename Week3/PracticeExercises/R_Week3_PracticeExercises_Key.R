@@ -141,7 +141,7 @@ class(Counts1998)
 # while integers must be positive, whole numbers
 
 #1.31) 
-chisq.test(Counts1998, Ticks$TickCount)
+t.test(Counts1998, Ticks$TickCount)
 # Output indicates they are not significantly different
 
 # 1.32
