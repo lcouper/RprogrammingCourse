@@ -49,7 +49,9 @@ View(Actual)
 ```
 
 1.10) Now lets say we want to "predict" the number of ticks we'd find at a new site given it's size, host diversity and lizard abundance. Follow the code below, which makes use of the "predict.lm" function to get estimated tick counts and store them in a new variable called "PredictTicks"
-
+```
+PredictTicks = predict.lm(model1, Actual)
+```
 1.11) Lets see how good our model was at "predicting" tick counts: Plot the *actual* tick counts against the *predicted* tick counts (with a scatterplot). Add a regression line (for a model of actual tick counts against predicted tick counts) to this plot in red
 
 1.12) Lets measure the difference in the actual tick counts and the predicted tick counts for each site. Create a new variable called "Diff" which subtracts the Actual from the predicted
