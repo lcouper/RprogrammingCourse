@@ -39,5 +39,8 @@ By [ ], please email me the following:
 - what analysis you did and why
 - at least one plot from your analysis
 
+For example for item 2:
+[include pic of word doc]
+
 
 
