@@ -28,3 +28,16 @@ The goal is simply to:
 2) produce some type of analysis of plot that you could describe to someone else
 
 Feel free to work as a group if you have shared interests or independently. Either way, feel free to ask each other questions, consult internet help documentation, and reach out to your instructor for guidance!
+
+# What to turn in #
+
+By [ ], please email me the following:
+
+1) The R script you used when analyzing the dataset
+2) A brief (one page or less) write-up of your work including:
+- a description of the dataset you chose
+- what analysis you did and why
+- at least one plot from your analysis
+
+
+
