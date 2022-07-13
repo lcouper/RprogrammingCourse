@@ -72,6 +72,7 @@ DivCategory = vector(mode="character", length=10)
 1.12) Create a for loop that assigns a category ('Low', 'Medium', or 'High') to a site based on the observed Diversity values. 
 The for loop is started for you below, but not finished.  
 
+```
 for (i in 1:23) {
   if (SpDiversity[i] < 0.50)
   {SpDivCategory[i] = "Low"}
@@ -80,6 +81,7 @@ for (i in 1:23) {
   if (# FILL IN CODE HERE)
   {DivCategory[i] = "High"}
 }
+```
 
 1.13) Examine the output. How many low, medium, and high sites are there? 
 
