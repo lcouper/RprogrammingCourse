@@ -39,8 +39,7 @@ By August, please email me <couperlisa@fhda.edu> the following:
 - what analysis you did and why, mentioning any key packages used
 - at least one plot from your analysis
 
-For example for item 2:
-[include pic of word doc]
+There is an example assignment included in this folder. 
 
 
 
