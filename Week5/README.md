@@ -13,11 +13,7 @@ We've made it to the fun part! So far, we've covered:
 - writing functions
 
 Now it's time to put it all together! Find a data set that *piques your interest*. 
-This could be data that you have collected from a personal/research projet or one that you've found online. 
-If you are struggling to find one, there are some free datasets available here:
-https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html
-and here:
-https://www.ecarleton.ca/mod/folder/view.php?id=641
+This could be data that you have collected from a personal/research projet or one that you've found online. If you're struggling to find one, check out the links at the bottom. 
 
 Using one of these datasets, import it into R and try analyzing it! This could involve looking for trends between different variables,
 creating basic plots to summarize the data, reshaping the data and performing basic calculations on it to make it easier for others to work with.
@@ -46,6 +42,8 @@ There is an example assignment included in this folder.
 
 Feel free to use whatever dataset interests you and that you have access to! If you need help finding one, here are a couple places to look for free, publicly available datasets that may be of interest:
 
+- Some cleaned Biology datasets intended for use in R: https://stat.ethz.ch/R-manual/R-devel/library/datasets/html/00Index.html
+- Some additional cleaned Bio datasets: https://www.ecarleton.ca/mod/folder/view.php?id=641
 - Demographic and socioeconomic datasets from the U.S. Census Bureau: https://www.census.gov/data/datasets.html  
 - Health & Disease related datasets from the CDC: https://www.cdc.gov/datastatistics/index.html  
 - Google search frequency data: https://trends.google.com/trends/?geo=US  
