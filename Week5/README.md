@@ -29,6 +29,7 @@ The goal is simply to:
 
 Feel free to work as a group if you have shared interests or independently. Either way, feel free to ask each other questions, consult internet help documentation, and reach out to your instructor for guidance!
 
+
 # What to turn in #
 
 By August, please email me <couperlisa@fhda.edu> the following:
@@ -40,6 +41,17 @@ By August, please email me <couperlisa@fhda.edu> the following:
 - at least one plot from your analysis
 
 There is an example assignment included in this folder. 
+
+# Potential Datasets #
+
+Feel free to use whatever dataset interests you and that you have access to! If you need help finding one, here are a couple places to look for free, publicly available datasets that may be of interest:
+
+- Demographic and socioeconomic datasets from the U.S. Census Bureau: https://www.census.gov/data/datasets.html  
+- Health & Disease related datasets from the CDC: https://www.cdc.gov/datastatistics/index.html  
+- Google search frequency data: https://trends.google.com/trends/?geo=US  
+- Ecological data (species counts, water quality, vegetation indices, etc.) from NEON: https://www.neonscience.org/data-samples  
+- Climate data from NOAA: https://www.ncei.noaa.gov/cdo-web/  
+- Land cover data from the MRLC: https://www.mrlc.gov/data  
 
 
 
