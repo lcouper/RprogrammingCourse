@@ -31,7 +31,7 @@ Feel free to work as a group if you have shared interests or independently. Eith
 
 # What to turn in #
 
-By [ ], please email me the following:
+By August, please email me <couperlisa@fhda.edu> the following:
 
 1) The R script you used when analyzing the dataset
 2) A brief (one page or less) write-up of your work including:
