@@ -43,7 +43,7 @@ For loops will always have the general structure above -- the command 'for' foll
 **General steps:**
 1) Write out the code for a single case
 2) Create any empty vector for your new values to live
-3) Identify and Sst the # of times for the loop to run
+3) Identify and set the # of times for the loop to run
 4) Provide the code to be repeated from step 1, but update it for a general case
 
 Some more examples of basic for loops can be found here: https://www.w3schools.com/r/r_for_loop.asp
