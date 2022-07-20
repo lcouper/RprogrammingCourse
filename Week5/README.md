@@ -36,7 +36,7 @@ By August, please email me <couperlisa@fhda.edu> the following:
 1) The R script you used when analyzing the dataset
 2) A brief (one page or less) write-up of your work including:
 - a description of the dataset you chose
-- what analysis you did and why
+- what analysis you did and why, mentioning any key packages used
 - at least one plot from your analysis
 
 For example for item 2:
